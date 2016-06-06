@@ -9,6 +9,11 @@ fields:
         size: big
         required: true
         type: text
+
+    type_id:
+        label: Type
+        type: dropdown
+
     survey_id:
         label: Survey
         type: dropdown

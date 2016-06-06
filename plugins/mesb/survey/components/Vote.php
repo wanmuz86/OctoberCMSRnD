@@ -14,12 +14,14 @@ use Illuminate\Validation;
 use Mesb\Survey\Models\Question as Question;
 use Mesb\Survey\Models\Poll as Polls;
 use Mesb\Survey\Models\Survey as Surveys;
+use Mesb\Muse\Models\Service as Service;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Contracts\Validation\ValidationException;
+
 
 class Vote extends ComponentBase
 {
+    public $currentService;
     public $currentSurvey;
     public $latestPoll;
     public $latestPollAnswers;
@@ -47,12 +49,22 @@ class Vote extends ComponentBase
                 'description' => 'Survey to display',
                 'type'        => 'dropdown'
             ],
+            'service' => [
+                'title'       => 'Service',
+                'description' => 'Service to display',
+                'type'        => 'dropdown'
+            ],
         ];
     }
 
     public function getSurveyOptions()
     {
         return array_add(Surveys::all()->lists('name', 'id'), '', '-none-');
+    }
+
+    public function getServiceOptions()
+    {
+        return array_add(Service::all()->lists('name', 'id'), '', '-none-');
     }
 
     public function onRun()
@@ -65,6 +77,7 @@ class Vote extends ComponentBase
     }
     public function onRender()
     {
+        $this->currentService = $this->page['currentService'] = Service::getCurrentService($this->property('service'));
         $this->currentSurvey = $this->page['currentSurvey'] = Surveys::getCurrentSurvey(($this->property('survey') == 0 ? Surveys::getLatestSurveyId() : $this->property('survey')));
         $this->latestPoll = $this->page['latestPoll'] = Question::getLatestPoll( $this->currentSurvey->id);
         $this->latestPollAnswers = $this->page['latestPollAnswers'] = Question::getLatestPollAnswers( $this->currentSurvey->id);
@@ -85,6 +98,7 @@ class Vote extends ComponentBase
             foreach (post('polls') as $poll) {
                 $addVote = new Polls;
                 $addVote->poll_id = ($poll['id'] );
+                $addVote->service_id = post('service');
                 $addVote->answer_id = \Input::get('vote_answer_'.$poll['id']);
                 $addVote->save();
             }

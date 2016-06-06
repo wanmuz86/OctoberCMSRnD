@@ -1,7 +1,7 @@
 <?php namespace Mesb\Survey\Models;
 
 use Model;
-
+use Mesb\Muse\Models\Service;
 /**
  * Survey Model
  */
@@ -31,7 +31,12 @@ class Survey extends Model
         'questions' => '\Mesb\Muse\Model\Question'
     ];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany =[
+        'services' => [
+            '\Mesb\Muse\Models\Service',
+            'table' => 'mesb_survey_surveys_services'
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

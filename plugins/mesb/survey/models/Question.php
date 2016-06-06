@@ -29,7 +29,8 @@ class Question extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [
-        'survey' => '\Mesb\Muse\Survey'
+        'survey' => '\Mesb\Muse\Survey',
+        'type' => '\Mesb\Muse\QuestionType'
     ];
     public $belongsToMany = [];
     public $morphTo = [];
@@ -44,10 +45,22 @@ class Question extends Model
         $surveysOptions = [];
 
         $surveys->each(function($survey) use (&$surveysOptions) {
-            $teamsOptions[$survey->id] = $survey->name;
+            $surveysOptions[$survey->id] = $survey->name;
         });
 
         return $surveysOptions;
+    }
+
+    public function getTypeIdOptions()
+    {
+        $types = QuestionType::all(['id', 'name']);
+        $typesOptions = [];
+
+        $types->each(function($type) use (&$typesOptions) {
+            $typesOptions[$type->id] = $type->name;
+        });
+
+        return $typesOptions;
     }
 
     public static function getLatestPoll($pollId = NULL)

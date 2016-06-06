@@ -1,4 +1,4 @@
-1465180028s:1521:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:684:"{% if not bannerImage %}
+1465202064s:1521:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:684:"{% if not bannerImage %}
     {% set randomImage = ['highchair', 'sofa', 'cafe', 'in-field', 'wheelchair', 'chairs', 'lake', 'rocking-chairs'] %}
     {% set bannerImage = banner ? banner|media : ('assets/images/chairs/'~random(randomImage)~'.jpg')|theme %}
 {% endif %}

@@ -3,3 +3,4 @@
     - create_polls_table.php
     - create_questions_table.php
     - create_surveys_table.php
+    - create_question_types_table.php

@@ -1,4 +1,4 @@
-1465144045s:2202:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:940:"description = "Displays a small feed of latest news"
+1465199496s:2202:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:940:"description = "Displays a small feed of latest news"
 
 [viewBag]
 snippetCode = "news"

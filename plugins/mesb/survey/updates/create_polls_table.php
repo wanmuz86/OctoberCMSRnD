@@ -14,6 +14,7 @@ class CreatePollsTable extends Migration
             $table->increments('id');
             $table->integer('answer_id');
             $table->integer('poll_id');
+            $table->integer('service_id');
             $table->timestamps();
         });
     }

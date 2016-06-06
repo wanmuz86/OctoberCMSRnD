@@ -19,3 +19,7 @@ fields:
         label: 'End Date'
         mode: datetime
         type: datepicker
+    services:
+        label: Services
+        type: relation
+        nameFrom: name

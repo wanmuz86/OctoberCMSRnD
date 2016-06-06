@@ -1,4 +1,4 @@
-1465144044s:1258:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:552:"{% set categories = blogCategories.categories %}
+1465199494s:1258:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:552:"{% set categories = blogCategories.categories %}
 {% set currentCategorySlug = blogCategories.currentCategorySlug %}
 
 <div class="list-group">

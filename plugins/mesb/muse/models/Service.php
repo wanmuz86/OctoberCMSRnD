@@ -51,4 +51,15 @@ class Service extends Model
 
         return $agenciesOptions;
     }
+
+    public static function getCurrentService($serviceId = NULL)
+    {
+        $currentService = self::take(1)->orderBy('created_at', 'desc');
+        if($serviceId != NULL)
+        {
+            $currentService->where('id', $serviceId);
+        }
+
+        return $currentService->get()[0];
+    }
 }
