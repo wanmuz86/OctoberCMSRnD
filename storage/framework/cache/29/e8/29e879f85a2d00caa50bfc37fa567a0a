@@ -1,0 +1,172 @@
+1464610777s:6852:"a:6:{s:5:"mtime";i:1464589499;s:7:"content";s:3332:"title = "Home"
+url = "/"
+layout = "materialize"
+is_hidden = 0
+==
+<div class="welcome indigo darken-3 white-text">
+Materialize
+</div>
+
+<div class="section">
+    <div class="container">
+        {% content "home.md" %}
+    </div>
+</div>
+
+<div class="section services">
+    <h4 class="section-title">Services</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col l4 s12">
+                <div class="card white">
+                    <div class="card-content grey-text darken-4">
+                        <div class="service-icon"><i class="medium material-icons">web</i></div>
+                        <span class="card-title grey-text text-darken-4">Web Design</span>
+                        <p>We design the best website around.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4  s12">
+                <div class="card white">
+                    <div class="card-content grey-text darken-4">
+                        <div class="service-icon"><i class="medium material-icons">web</i></div>
+                        <span class="card-title grey-text text-darken-4">Web Design</span>
+                        <p>We design the best website around.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 s12">
+                <div class="card white">
+                    <div class="card-content grey-text darken-4">
+                        <div class="service-icon"><i class="medium material-icons">web</i></div>
+                        <span class="card-title grey-text text-darken-4">Web Design</span>
+                        <p>We design the best website around.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section contact">
+    <div class="section-title">Contact</div>
+    <div class="container">
+        <form class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="subject" type="text">
+                        <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                    <button type="submit" class="btn waves-effect waves-light">
+                        Send <i class="medium right material-icons">content_send</i>
+                    </div>
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:11:"materialize";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:3267:"<div class="welcome indigo darken-3 white-text">
+Materialize
+</div>
+
+<div class="section">
+    <div class="container">
+        {% content "home.md" %}
+    </div>
+</div>
+
+<div class="section services">
+    <h4 class="section-title">Services</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col l4 s12">
+                <div class="card white">
+                    <div class="card-content grey-text darken-4">
+                        <div class="service-icon"><i class="medium material-icons">web</i></div>
+                        <span class="card-title grey-text text-darken-4">Web Design</span>
+                        <p>We design the best website around.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4  s12">
+                <div class="card white">
+                    <div class="card-content grey-text darken-4">
+                        <div class="service-icon"><i class="medium material-icons">web</i></div>
+                        <span class="card-title grey-text text-darken-4">Web Design</span>
+                        <p>We design the best website around.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 s12">
+                <div class="card white">
+                    <div class="card-content grey-text darken-4">
+                        <div class="service-icon"><i class="medium material-icons">web</i></div>
+                        <span class="card-title grey-text text-darken-4">Web Design</span>
+                        <p>We design the best website around.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section contact">
+    <div class="section-title">Contact</div>
+    <div class="container">
+        <form class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name" type="text">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="subject" type="text">
+                        <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                    <button type="submit" class="btn waves-effect waves-light">
+                        Send <i class="medium right material-icons">content_send</i>
+                    </div>
+                    </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>";}";

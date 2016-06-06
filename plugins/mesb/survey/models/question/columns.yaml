@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    question:
+        label: Question
+        searchable: true
+
+    created_at:
+        label: Created
+        type: date
+
+    updated_at:
+        label: Updated
+        type: date
+
+    votes:
+        label: Votes
+        searchable: false
+        select: (SELECT COUNT(1) FROM mesb_survey_polls WHERE poll_id = mesb_survey_questions.id)

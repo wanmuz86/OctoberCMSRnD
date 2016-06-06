@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        type: text
+        required: true
+    start_date:
+        label: 'Start Date'
+        mode: datetime
+        type: datepicker
+    end_date:
+        label: 'End Date'
+        mode: datetime
+        type: datepicker
+    question_no:
+        label: 'Bilangan Soalan'
+        searchable: false
+        select: (SELECT COUNT(1) FROM mesb_survey_questions WHERE survey_id = mesb_survey_surveys.id)

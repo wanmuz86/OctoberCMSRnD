@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        required: true
+    image_url:
+            label: Image
+            type: text
+            required: true
+    users:
+        label: Users
+        type: checkboxlist

@@ -1,0 +1,31 @@
+<h1>{{ currentSurvey.name }}</h1>
+<h3>{{ currentSurvey.description }}</h3>
+
+<div id="errors"></div>
+<form data-request="onPoll"
+      data-request-data="polls: {{ latestPoll }}"
+      data-request-update="'{{ __SELF__ }}::result': '.confirm-container-{{ survey['id'] }}'"
+      data-request-success="$('.form-{{ survey['id'] }}').hide(1000)">
+    <div class="form-{{survey['id']}}">
+    {% for poll in latestPoll %}
+
+    <h4>{{ poll.question }}</h4>
+
+
+        {% for answer, key in latestPollAnswers[poll.id] %}
+
+        <div class="checkbox"><label for="{{poll['id']}}-{{ answer }}"><input id="{{poll['id']}}-{{ answer }}" type="radio" name="vote_answer_{{poll['id']}}" value="{{ answer }}" /> {{ key }}</label></div>
+
+        {% endfor %}
+
+    {% endfor %}
+        <button type="submit" class="btn btn-default">Vote</button>
+    </div>
+
+    <div class="confirm-container-{{ survey['id'] }}">
+        <!--This will contain the poll result -->
+    </div>
+</form>
+<div id="result"></div>
+
+

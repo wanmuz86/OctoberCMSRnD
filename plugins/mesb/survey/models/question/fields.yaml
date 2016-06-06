@@ -1,0 +1,35 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    question:
+        label: Question
+        span: left fullwidth
+        size: big
+        required: true
+        type: text
+    survey_id:
+        label: Survey
+        type: dropdown
+    answer_1:
+        span: auto
+        label: Answer 1
+
+    answer_2:
+        span: auto
+        label: Answer 2
+
+    answer_3:
+        span: auto
+        label: Answer 3
+
+    answer_4:
+        span: auto
+        label: Answer 4
+
+    answer_5:
+        span: auto
+        label: Answer 5
+
+

@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+
+1.0.2:
+    - 'Create tables'
+    - add_team_to_users.php
+    - create_agencies_table.php
+    - create_services_table.php

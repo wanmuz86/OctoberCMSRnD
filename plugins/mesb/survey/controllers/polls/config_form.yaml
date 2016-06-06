@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Poll
+
+# Model Form Field configuration
+form: $/mesb/survey/models/poll/fields.yaml
+
+# Model Class name
+modelClass: Mesb\Survey\Models\Poll
+
+# Default redirect location
+defaultRedirect: mesb/survey/polls
+
+# Create page
+create:
+    title: Create Poll
+    redirect: mesb/survey/polls/update/:id
+    redirectClose: mesb/survey/polls
+
+# Update page
+update:
+    title: Edit Poll
+    redirect: mesb/survey/polls
+    redirectClose: mesb/survey/polls
+
+# Preview page
+preview:
+    title: Preview Poll

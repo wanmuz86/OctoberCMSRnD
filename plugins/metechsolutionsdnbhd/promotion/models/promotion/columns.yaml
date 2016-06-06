@@ -1,0 +1,21 @@
+columns:
+    title:
+        label: 'Promo Title'
+        type: text
+        searchable: true
+        sortable: true
+    promo_code:
+        label: 'Promo Code'
+        type: text
+        searchable: true
+        sortable: true
+    start_date:
+        label: 'Start Date'
+        type: datetime
+        searchable: true
+        sortable: true
+    end_date:
+        label: 'End Date'
+        type: datetime
+        searchable: true
+        sortable: true

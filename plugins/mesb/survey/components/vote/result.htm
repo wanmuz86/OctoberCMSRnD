@@ -1,0 +1,8 @@
+{% for poll in latestPoll %}
+<h4>{{ poll.question }}</h4>
+{% for answer, key in latestPollAnswers[poll.id] %}
+
+<h5>{{ key }}</h5>
+<div class="progress" style="margin: 0;"><span class="{{ (barColor == '' ? 'red' : barColor) }}" style="width: {{ vote.getPercentById(poll.id, answer) }}%;"><span>{{ vote.getPercentById(poll.id, answer) }}%</span></span></div>
+{% endfor %}
+{% endfor %}

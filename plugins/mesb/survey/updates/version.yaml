@@ -1,0 +1,5 @@
+1.0.1:
+    - Initialize plugin.
+    - create_polls_table.php
+    - create_questions_table.php
+    - create_surveys_table.php

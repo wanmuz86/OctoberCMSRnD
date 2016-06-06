@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        required: true
+    description:
+        label: Description
+        type: textarea
+        required: true
+    start_date:
+        label: 'Start Date'
+        mode: datetime
+        type: datepicker
+    end_date:
+        label: 'End Date'
+        mode: datetime
+        type: datepicker

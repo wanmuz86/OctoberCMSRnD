@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Service
+
+# Model Form Field configuration
+form: $/mesb/muse/models/service/fields.yaml
+
+# Model Class name
+modelClass: Mesb\Muse\Models\Service
+
+# Default redirect location
+defaultRedirect: mesb/muse/services
+
+# Create page
+create:
+    title: Create Service
+    redirect: mesb/muse/services/update/:id
+    redirectClose: mesb/muse/services
+
+# Update page
+update:
+    title: Edit Service
+    redirect: mesb/muse/services
+    redirectClose: mesb/muse/services
+
+# Preview page
+preview:
+    title: Preview Service

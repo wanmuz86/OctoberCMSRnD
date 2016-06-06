@@ -1,0 +1,24 @@
+plugin:
+    name: 'metechsolutionsdnbhd.promotion::lang.plugin.name'
+    description: 'metechsolutionsdnbhd.promotion::lang.plugin.description'
+    author: 'Me-Tech Solution Sdn Bhd'
+    icon: oc-icon-tags
+    homepage: ''
+permissions:
+    Promotion:
+        tab: promotion
+        label: promo
+navigation:
+    promotion:
+        label: Promotion
+        url: metechsolutionsdnbhd/promotion/promotioncontroller
+        icon: icon-tags
+        permissions:
+            - Promotion
+        sideMenu:
+            promo:
+                label: Promo
+                url: metechsolutionsdnbhd/promotion/promotioncontroller
+                icon: icon-sitemap
+                permissions:
+                    - Promotion

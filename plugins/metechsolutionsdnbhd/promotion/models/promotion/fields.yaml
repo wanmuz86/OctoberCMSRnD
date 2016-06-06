@@ -1,0 +1,40 @@
+fields: {  }
+tabs:
+    fields:
+        title:
+            label: 'Promo Title'
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        promo_code:
+            label: 'Promo Code'
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        start_date:
+            label: 'Start Date'
+            mode: datetime
+            span: auto
+            type: datepicker
+            tab: 'Tab 1'
+        end_date:
+            label: 'Date picker'
+            mode: datetime
+            span: auto
+            type: datepicker
+            tab: 'Tab 1'
+        activated:
+            label: 'is Activate'
+            span: auto
+            type: checkbox
+            tab: 'Tab 1'
+        image_url:
+            label: Avatar
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Tab 1'

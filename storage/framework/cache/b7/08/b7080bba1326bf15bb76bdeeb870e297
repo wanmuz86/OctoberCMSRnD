@@ -1,0 +1,9 @@
+1464745401s:299:"a:2:{s:5:"mtime";i:1464665613;s:7:"content";s:245:"{% set record = __SELF__.record %}
+{% set displayColumn = __SELF__.displayColumn %}
+{% set notFoundMessage = __SELF__.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}";}";

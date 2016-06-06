@@ -1,0 +1,11 @@
+name: PromotionController
+modelClass: MeTechSolutionSdnBhd\Promotion\Models\Promotion
+form: $/metechsolutionsdnbhd/promotion/models/promotion/fields.yaml
+defaultRedirect: metechsolutionsdnbhd/promotion/promotioncontroller
+create:
+    redirect: 'metechsolutionsdnbhd/promotion/promotioncontroller/update/:id'
+    redirectClose: metechsolutionsdnbhd/promotion/promotioncontroller
+update:
+    redirect: metechsolutionsdnbhd/promotion/promotioncontroller
+    redirectClose: metechsolutionsdnbhd/promotion/promotioncontroller
+preview: {  }

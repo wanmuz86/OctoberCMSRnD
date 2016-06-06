@@ -1,0 +1,70 @@
+1464610777s:1760:"a:6:{s:5:"mtime";i:1464602595;s:7:"content";s:795:"[staticMenu topMenuLeft]
+code = "top-menu"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <link rel="stylesheet" href="{{ [
+    'assets/materialize/css/materialize.min.css',
+    'assets/css/app.css'
+    ]|theme }}">
+    <meta charset="UTF-8">
+</head>
+<body>
+<nav>
+    {% partial "nav" %}
+</nav>
+<main>
+    {% page %}
+</main>
+
+<footer class="page-footer">
+    {% partial "footer" %}
+</footer>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="{{ [
+'assets/materialize/js/materialize.min.js',
+'assets/js/app.js'
+]
+|theme}}"></script>
+
+{% framework extras %}
+{%  scripts %}
+</body>
+</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:22:"staticMenu topMenuLeft";a:1:{s:4:"code";s:8:"top-menu";}}}s:4:"code";N;s:6:"markup";s:749:"<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <link rel="stylesheet" href="{{ [
+    'assets/materialize/css/materialize.min.css',
+    'assets/css/app.css'
+    ]|theme }}">
+    <meta charset="UTF-8">
+</head>
+<body>
+<nav>
+    {% partial "nav" %}
+</nav>
+<main>
+    {% page %}
+</main>
+
+<footer class="page-footer">
+    {% partial "footer" %}
+</footer>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="{{ [
+'assets/materialize/js/materialize.min.js',
+'assets/js/app.js'
+]
+|theme}}"></script>
+
+{% framework extras %}
+{%  scripts %}
+</body>
+</html>";}";

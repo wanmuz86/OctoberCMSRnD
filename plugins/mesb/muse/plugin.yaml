@@ -1,0 +1,6 @@
+plugin:
+    name: 'mesb.muse::lang.plugin.name'
+    description: 'mesb.muse::lang.plugin.description'
+    author: 'Me-Tech Solution Sdn Bhd'
+    icon: oc-icon-adjust
+    homepage: ''

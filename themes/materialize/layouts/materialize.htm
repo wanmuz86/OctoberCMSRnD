@@ -1,0 +1,37 @@
+[staticMenu topMenuLeft]
+code = "top-menu"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ this.page.title }}</title>
+    <link rel="stylesheet" href="{{ [
+    'assets/materialize/css/materialize.min.css',
+    'assets/css/app.css'
+    ]|theme }}">
+    <meta charset="UTF-8">
+</head>
+<body>
+<nav>
+    {% partial "nav" %}
+</nav>
+<main>
+    {% page %}
+</main>
+
+<footer class="page-footer">
+    {% partial "footer" %}
+</footer>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="{{ [
+'assets/materialize/js/materialize.min.js',
+'assets/js/app.js'
+]
+|theme}}"></script>
+
+{% framework extras %}
+{%  scripts %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+title = "Promo"
+url = "/promo/:id"
+is_hidden = 0
+
+[builderDetails promoDetails]
+modelClass = "MeTechSolutionSdnBhd\Promotion\Models\Promotion"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = promoDetails.record %}
+{% set displayColumn = promoDetails.displayColumn %}
+{% set notFoundMessage = promoDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% for image in promoDetails.image_url %}
+<img src="{{ image.thumb(200, 200) }}" title="{{ image.title }}" alt="{{ image.description }}">
+{% endfor %}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

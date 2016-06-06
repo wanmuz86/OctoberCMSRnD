@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Survey
+
+# Model Form Field configuration
+form: $/mesb/survey/models/survey/fields.yaml
+
+# Model Class name
+modelClass: Mesb\Survey\Models\Survey
+
+# Default redirect location
+defaultRedirect: mesb/survey/surveys
+
+# Create page
+create:
+    title: Create Survey
+    redirect: mesb/survey/surveys/update/:id
+    redirectClose: mesb/survey/surveys
+
+# Update page
+update:
+    title: Edit Survey
+    redirect: mesb/survey/surveys
+    redirectClose: mesb/survey/surveys
+
+# Preview page
+preview:
+    title: Preview Survey

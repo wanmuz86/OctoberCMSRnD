@@ -1,0 +1,17 @@
+.welcome {
+    text-align: center;
+    padding: 70px 0;
+    font-size: 70px;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.section .section-title {
+    text-align: center;
+}
+.services .service-icon {
+    font-size:50px;
+    text-align: center;
+}
