@@ -1,0 +1,78 @@
+title = "home"
+url = "/"
+is_hidden = 0
+==
+{% partial "layout" %}
+
+<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>
+
+<!-- Full page, started in Survey_Common_Action::render_wrapped_template() -->
+<div class="container-fluid full-page-wrapper" id="in_survey_common_action">
+	<div class="row"><div class="container-fluid welcome">
+		<div class="row text-center">
+			<div class="col-lg-3 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+				<div class="panel panel-primary login-pannel" id="pannel-1">
+
+					<!-- Header -->
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<img alt="logo" id="profile-img" class="profile-img-card img-responsive center-block" src="{{ 'assets/tmp/assets/1a96f8c4/logo.png'|theme }}" />
+								<h3>Survey Form</h3>
+							</div>
+						</div>
+					</div>
+
+					<!-- Action Name -->
+					<div class="row login-title login-content">
+						<div class="col-lg-12">
+							<h3>Log in</h3>
+						</div>
+					</div>
+
+					<!-- Form -->
+					<div class="row login-content login-content-form">
+                        <div class="col-lg-12">
+                            <input type="hidden" value="Authdb" name="authMethod" id="authMethod"><span><label for="user">Username</label><input placeholder="Email" id="email" class="form-control" required="required" name="email" type="text">
+                                </span><span><label for="password">Kata laluan</label><input placeholder="Password" class="form-control" required="required" name="password" type="password" value="">
+                                </span>
+                               
+                                                        </div>
+                    </div>
+
+				<!-- Buttons -->
+				<div class="row login-submit login-content">
+					<div class="col-lg-12">
+						<p><input type='hidden' name='action' value='login' />
+							<button type="submit" class="btn btn-default" name='login_submit' value='Login' >Submit</button><br />
+							<br/>
+							<a href="{{ url('forgot_password') }}">Forgot Password?</a><br />
+						</p>
+					</div>
+
+				</div>
+			</form>            </div>
+		</div>
+	</div>
+</div>
+<div style="text-align:center">
+
+	<p><strong>Standard User:</strong> user@user.com<br>
+		<strong>Standard User Password:</strong> sentineluser</p>
+
+		<p><strong>Admin User:</strong> admin@admin.com<br>
+			<strong>Admin Password:</strong> sentineladmin</p>
+		</div>
+		<script type='text/javascript'>
+			document.getElementById('email').focus();
+		</script>
+	</div></div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		jQuery('body').popover({'selector':'a[rel=popover]'});
+		jQuery('body').tooltip({'selector':'a[rel=tooltip]'});
+//jQuery('#loginlang').select2({'options':{'width':'230px'},'htmlOptions':{'id':'loginlang'},'value':'default'});
+/*]]>*/
+</script>
