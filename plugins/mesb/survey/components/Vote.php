@@ -29,6 +29,7 @@ class Vote extends ComponentBase
     public $vote;
     public $property;
     public $poll_id;
+    public $service_id;
 
 
     /**
@@ -44,15 +45,17 @@ class Vote extends ComponentBase
     public function defineProperties()
     {
         return [
-            'survey' => [
-                'title'       => 'Survey',
-                'description' => 'Survey to display',
-                'type'        => 'dropdown'
+            'poll_id' => [
+                'title'       => 'Survey ID',
+                'description' => 'Enter Survey ID',
+                'default'     => '{{ :poll_id }}',
+                'type'        => 'string'
             ],
-            'service' => [
-                'title'       => 'Service',
-                'description' => 'Service to display',
-                'type'        => 'dropdown'
+            'service_id' => [
+                'title'       => 'Service ID',
+                'description' => 'Enter Service ID',
+                'default'     => '{{ :service_id }}',
+                'type'        => 'string'
             ],
         ];
     }
@@ -67,6 +70,7 @@ class Vote extends ComponentBase
         return array_add(Service::all()->lists('name', 'id'), '', '-none-');
     }
 
+
     public function onRun()
     {
         $this->addCss('/plugins/mesb/survey/assets/css/poll.css');
@@ -77,8 +81,8 @@ class Vote extends ComponentBase
     }
     public function onRender()
     {
-        $this->currentService = $this->page['currentService'] = Service::getCurrentService($this->property('service'));
-        $this->currentSurvey = $this->page['currentSurvey'] = Surveys::getCurrentSurvey(($this->property('survey') == 0 ? Surveys::getLatestSurveyId() : $this->property('survey')));
+        $this->currentService = $this->page['currentService'] = Service::getCurrentService($this->property('service_id'));
+        $this->currentSurvey = $this->page['currentSurvey'] = Surveys::getCurrentSurvey(($this->property('service_id') == 0 ? Surveys::getLatestSurveyId() : $this->property('service_id')));
         $this->latestPoll = $this->page['latestPoll'] = Question::getLatestPoll( $this->currentSurvey->id);
         $this->latestPollAnswers = $this->page['latestPollAnswers'] = Question::getLatestPollAnswers( $this->currentSurvey->id);
     }

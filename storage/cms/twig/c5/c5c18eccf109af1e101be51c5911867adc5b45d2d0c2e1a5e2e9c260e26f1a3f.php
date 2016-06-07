@@ -17,7 +17,7 @@ class __TwigTemplate_f726001cc2096fbd11c163038bb838de130667724a80a26279ff48a0bf5
     {
         // line 1
         $context['__cms_component_params'] = [];
-        echo $this->env->getExtension('CMS')->componentFunction("survey"        , $context['__cms_component_params']        );
+        echo $this->env->getExtension('CMS')->componentFunction("poll"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
     }
 
@@ -36,4 +36,4 @@ class __TwigTemplate_f726001cc2096fbd11c163038bb838de130667724a80a26279ff48a0bf5
         return array (  19 => 1,);
     }
 }
-/* {% component 'survey' %}*/
+/* {% component 'poll' %}*/

@@ -1,4 +1,4 @@
-1465199496s:1354:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:600:"{# Renders a menu with any child static pages #}
+1465271529s:1354:"a:6:{s:5:"mtime";i:1464665486;s:7:"content";s:600:"{# Renders a menu with any child static pages #}
 
 {% set parentOrSelf = page.parent ?: page %}
 {% set childPages = parentOrSelf.children %}

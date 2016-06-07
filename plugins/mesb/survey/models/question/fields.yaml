@@ -17,24 +17,43 @@ fields:
     survey_id:
         label: Survey
         type: dropdown
+
     answer_1:
         span: auto
         label: Answer 1
+        trigger:
+            action: show
+            field: type_id
+            condition: value[1][2]
 
     answer_2:
         span: auto
         label: Answer 2
+        trigger:
+            action: show
+            field: type_id
+            condition: value[1][2]
 
     answer_3:
         span: auto
         label: Answer 3
+        trigger:
+            action: show
+            field: type_id
+            condition: value[1]
 
     answer_4:
         span: auto
         label: Answer 4
+        trigger:
+            action: show
+            field: type_id
+            condition: value[1]
 
     answer_5:
         span: auto
         label: Answer 5
-
-
+        trigger:
+            action: show
+            field: type_id
+            condition: value[1]

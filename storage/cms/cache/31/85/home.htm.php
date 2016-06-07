@@ -1,6 +1,6 @@
 <?php 
 use RainLab\Pages\Classes\Page;
-class Cms5755292e01e8d_3005456907Class extends \Cms\Classes\LayoutCode
+class Cms5756383aa3f3b_3845648840Class extends \Cms\Classes\LayoutCode
 {
 
 public function onStart()

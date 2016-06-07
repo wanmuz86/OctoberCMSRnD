@@ -86,16 +86,15 @@ class __TwigTemplate_18fce3b79c997bc00e15499ece53a808a4f6f3f38f39cb5982078484e08
                     echo "\" /> ";
                     echo twig_escape_filter($this->env, $context["key"], "html", null, true);
                     echo "</label></div>
-
         ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['answer'], $context['key'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 19
+                // line 18
                 echo "        ";
             } elseif (($this->getAttribute($context["poll"], "type_id", array()) == 2)) {
-                // line 20
+                // line 19
                 echo "        <div class=\"checkbox\"><label for=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-yes\"><input id=\"";
@@ -104,7 +103,7 @@ class __TwigTemplate_18fce3b79c997bc00e15499ece53a808a4f6f3f38f39cb5982078484e08
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"yes\" /> Ya</label></div>
         <div class=\"checkbox\"><label for=\"";
-                // line 21
+                // line 20
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-no\"><input id=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
@@ -112,19 +111,75 @@ class __TwigTemplate_18fce3b79c997bc00e15499ece53a808a4f6f3f38f39cb5982078484e08
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"no\" /> Tidak</label></div>
         ";
+            } elseif (($this->getAttribute(            // line 21
+$context["poll"], "type_id", array()) == 3)) {
+                // line 22
+                echo "
+        <div class=\"checkbox\"><label for=\"";
+                // line 23
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-1\"><input id=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-1\" type=\"radio\" name=\"vote_answer_";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "\" value=\"1\" /><img src=\"";
+                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-1.png";
+                echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
+        <div class=\"checkbox\"><label for=\"";
+                // line 24
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-2\"><input id=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-2\" type=\"radio\" name=\"vote_answer_";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "\" value=\"2\" /><img src=\"";
+                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-2.png";
+                echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
+        <div class=\"checkbox\"><label for=\"";
+                // line 25
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-3\"><input id=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-3\" type=\"radio\" name=\"vote_answer_";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "\" value=\"3\" /><img src=\"";
+                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-3.png";
+                echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
+        <div class=\"checkbox\"><label for=\"";
+                // line 26
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-4\"><input id=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-4\" type=\"radio\" name=\"vote_answer_";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "\" value=\"4\" /><img src=\"";
+                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-4.png";
+                echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
+        <div class=\"checkbox\"><label for=\"";
+                // line 27
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-5\"><input id=\"";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "-5\" type=\"radio\" name=\"vote_answer_";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
+                echo "\" value=\"5\" /><img src=\"";
+                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-5.png";
+                echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
+
+        ";
             }
-            // line 23
+            // line 30
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['poll'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 31
         echo "        <button type=\"submit\" class=\"btn btn-default\">Vote</button>
     </div>
 
     <div class=\"confirm-container-";
-        // line 27
+        // line 34
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["survey"]) ? $context["survey"] : null), "id", array(), "array"), "html", null, true);
         echo "\">
         <!--This will contain the poll result -->
@@ -148,7 +203,7 @@ class __TwigTemplate_18fce3b79c997bc00e15499ece53a808a4f6f3f38f39cb5982078484e08
 
     public function getDebugInfo()
     {
-        return array (  128 => 27,  123 => 24,  117 => 23,  108 => 21,  99 => 20,  96 => 19,  75 => 16,  72 => 15,  67 => 14,  65 => 13,  61 => 12,  58 => 11,  54 => 10,  50 => 9,  46 => 8,  40 => 7,  34 => 6,  28 => 3,  24 => 2,  19 => 1,);
+        return array (  183 => 34,  178 => 31,  172 => 30,  160 => 27,  150 => 26,  140 => 25,  130 => 24,  120 => 23,  117 => 22,  115 => 21,  107 => 20,  98 => 19,  95 => 18,  75 => 16,  72 => 15,  67 => 14,  65 => 13,  61 => 12,  58 => 11,  54 => 10,  50 => 9,  46 => 8,  40 => 7,  34 => 6,  28 => 3,  24 => 2,  19 => 1,);
     }
 }
 /* <h1>{{ currentSurvey.name }}</h1>*/
@@ -167,11 +222,18 @@ class __TwigTemplate_18fce3b79c997bc00e15499ece53a808a4f6f3f38f39cb5982078484e08
 /*         {% for answer, key in latestPollAnswers[poll.id] %}*/
 /* */
 /*         <div class="checkbox"><label for="{{poll['id']}}-{{ answer }}"><input id="{{poll['id']}}-{{ answer }}" type="radio" name="vote_answer_{{poll['id']}}" value="{{ answer }}" /> {{ key }}</label></div>*/
-/* */
 /*         {% endfor %}*/
 /*         {% elseif poll.type_id == 2 %}*/
 /*         <div class="checkbox"><label for="{{poll['id']}}-yes"><input id="{{poll['id']}}-yes" type="radio" name="vote_answer_{{poll['id']}}" value="yes" /> Ya</label></div>*/
 /*         <div class="checkbox"><label for="{{poll['id']}}-no"><input id="{{poll['id']}}-no" type="radio" name="vote_answer_{{poll['id']}}" value="no" /> Tidak</label></div>*/
+/*         {% elseif poll.type_id == 3 %}*/
+/* */
+/*         <div class="checkbox"><label for="{{poll['id']}}-1"><input id="{{poll['id']}}-1" type="radio" name="vote_answer_{{poll['id']}}" value="1" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-1.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox"><label for="{{poll['id']}}-2"><input id="{{poll['id']}}-2" type="radio" name="vote_answer_{{poll['id']}}" value="2" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-2.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox"><label for="{{poll['id']}}-3"><input id="{{poll['id']}}-3" type="radio" name="vote_answer_{{poll['id']}}" value="3" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-3.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox"><label for="{{poll['id']}}-4"><input id="{{poll['id']}}-4" type="radio" name="vote_answer_{{poll['id']}}" value="4" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-4.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox"><label for="{{poll['id']}}-5"><input id="{{poll['id']}}-5" type="radio" name="vote_answer_{{poll['id']}}" value="5" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-5.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/* */
 /*         {% endif %}*/
 /*     {% endfor %}*/
 /*         <button type="submit" class="btn btn-default">Vote</button>*/
