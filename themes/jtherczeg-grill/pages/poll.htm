@@ -1,0 +1,10 @@
+title = "poll"
+url = "/poll/:service_id/:poll_id"
+layout = "default"
+is_hidden = 0
+
+[poll]
+poll_id = "{{ :poll_id }}"
+service_id = "{{ :service_id }}"
+==
+{% component 'poll' %}

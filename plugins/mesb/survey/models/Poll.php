@@ -36,9 +36,9 @@ class Poll extends Model
     public $attachOne = [];
     public $attachMany = [];
 
-    public static function getPercentById($pollId, $answerId)
+    public static function getPercentById($serviceId, $pollId, $answerId)
     {
-        $pollQuery = self::where('poll_id', $pollId)->count();
+        $pollQuery = self::where('poll_id', $pollId)->where('service_id',$serviceId)->count();
         $pollAnswerQuery = self::where('poll_id', $pollId)->where('answer_id', $answerId)->count();
 
         if($pollAnswerQuery != 0)

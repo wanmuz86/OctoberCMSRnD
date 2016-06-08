@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
             $table->string('name')->nullable();
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer('agency_id')->unsigned();
             $table->string('activation_code')->nullable()->index();
             $table->string('persist_code')->nullable();
             $table->string('reset_password_code')->nullable()->index();
