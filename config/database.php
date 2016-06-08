@@ -56,13 +56,12 @@ return [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'port'      => 3306,
-            'database'  => 'october',
+            'database'  => 'muse_survey',
             'username'  => 'root',
-            'password'  => 'root',
+            'password'  => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
         ],
 
         'pgsql' => [

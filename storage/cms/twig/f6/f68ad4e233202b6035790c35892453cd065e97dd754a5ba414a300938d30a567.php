@@ -52,6 +52,10 @@ class __TwigTemplate_457e76524a1d54b17ece643e18e22fc9a3b61616b185e5956e86b23653e
 
 \t\t\t\t\t<!-- Form -->
 \t\t\t\t\t<div class=\"row login-content login-content-form\">
+\t\t\t\t\t<form action=\"";
+        // line 31
+        echo $this->env->getExtension('CMS')->pageFilter("admin/dashboard");
+        echo "\">   
                         <div class=\"col-lg-12\">
                             <input type=\"hidden\" value=\"Authdb\" name=\"authMethod\" id=\"authMethod\"><span><label for=\"user\">Username</label><input placeholder=\"Email\" id=\"email\" class=\"form-control\" required=\"required\" name=\"email\" type=\"text\">
                                 </span><span><label for=\"password\">Kata laluan</label><input placeholder=\"Password\" class=\"form-control\" required=\"required\" name=\"password\" type=\"password\" value=\"\">
@@ -67,7 +71,7 @@ class __TwigTemplate_457e76524a1d54b17ece643e18e22fc9a3b61616b185e5956e86b23653e
 \t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-default\" name='login_submit' value='Login' >Submit</button><br />
 \t\t\t\t\t\t\t<br/>
 \t\t\t\t\t\t\t<a href=\"";
-        // line 45
+        // line 46
         echo url("forgot_password");
         echo "\">Forgot Password?</a><br />
 \t\t\t\t\t\t</p>
@@ -113,7 +117,7 @@ class __TwigTemplate_457e76524a1d54b17ece643e18e22fc9a3b61616b185e5956e86b23653e
 
     public function getDebugInfo()
     {
-        return array (  71 => 45,  39 => 16,  23 => 2,  19 => 1,);
+        return array (  75 => 46,  57 => 31,  39 => 16,  23 => 2,  19 => 1,);
     }
 }
 /* {% partial "layout" %}*/
@@ -146,6 +150,7 @@ class __TwigTemplate_457e76524a1d54b17ece643e18e22fc9a3b61616b185e5956e86b23653e
 /* */
 /* 					<!-- Form -->*/
 /* 					<div class="row login-content login-content-form">*/
+/* 					<form action="{{ 'admin/dashboard'|page }}">   */
 /*                         <div class="col-lg-12">*/
 /*                             <input type="hidden" value="Authdb" name="authMethod" id="authMethod"><span><label for="user">Username</label><input placeholder="Email" id="email" class="form-control" required="required" name="email" type="text">*/
 /*                                 </span><span><label for="password">Kata laluan</label><input placeholder="Password" class="form-control" required="required" name="password" type="password" value="">*/
