@@ -1,0 +1,34 @@
+1465312040s:1602:"a:6:{s:5:"mtime";i:1465275849;s:7:"content";s:689:"title = "Promo"
+url = "/promo/:id"
+is_hidden = 0
+
+[builderDetails promoDetails]
+modelClass = "MeTechSolutionSdnBhd\Promotion\Models\Promotion"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = promoDetails.record %}
+{% set displayColumn = promoDetails.displayColumn %}
+{% set notFoundMessage = promoDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% for image in promoDetails.image_url %}
+<img src="{{ image.thumb(200, 200) }}" title="{{ image.title }}" alt="{{ image.description }}">
+{% endfor %}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:5:"Promo";s:3:"url";s:10:"/promo/:id";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:27:"builderDetails promoDetails";a:5:{s:10:"modelClass";s:47:"MeTechSolutionSdnBhd\Promotion\Models\Promotion";s:15:"identifierValue";s:9:"{{ :id }}";s:14:"modelKeyColumn";s:2:"id";s:13:"displayColumn";s:5:"title";s:15:"notFoundMessage";s:16:"Record not found";}}}s:4:"code";N;s:6:"markup";s:419:"{% set record = promoDetails.record %}
+{% set displayColumn = promoDetails.displayColumn %}
+{% set notFoundMessage = promoDetails.notFoundMessage %}
+
+{% if record %}
+    {{ attribute(record, displayColumn) }}
+{% for image in promoDetails.image_url %}
+<img src="{{ image.thumb(200, 200) }}" title="{{ image.title }}" alt="{{ image.description }}">
+{% endfor %}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}";}";

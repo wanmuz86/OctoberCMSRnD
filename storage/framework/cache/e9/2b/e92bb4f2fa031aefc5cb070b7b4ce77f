@@ -1,0 +1,7 @@
+1465355402s:350:"a:6:{s:5:"mtime";i:1465349131;s:7:"content";s:86:"title = "test"
+url = "/test"
+is_hidden = 0
+
+[survey]
+==
+{% component 'survey' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:4:"test";s:3:"url";s:5:"/test";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:6:"survey";a:0:{}}}s:4:"code";N;s:6:"markup";s:24:"{% component 'survey' %}";}";
