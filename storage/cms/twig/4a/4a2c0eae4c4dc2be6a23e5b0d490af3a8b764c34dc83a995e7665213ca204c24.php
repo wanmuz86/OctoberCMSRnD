@@ -28,25 +28,25 @@ class __TwigTemplate_df895246f173a3c9eb35e7cf4d51a8e61fdd931b79c6773d81201e3a8e0
 var chart = AmCharts.makeChart( \"chartdiv_top\", {
   \"type\": \"serial\",
   \"theme\": \"light\",
-  \"fontSize\":8,
   \"dataProvider\": [ {
-    \"service\": \"MyEG/ Replacement Identity Card\",
+    \"country\": \"MyEG/ Replacement Identity Card\",
     \"visits\": 2100,
+    \"fontsize\": 4,
     \"color\":\"#206fa7\"
   }, {
-    \"service\": \"Semakan Rayuan Asrama Penuh\",
-    \"visits\": 2000,
-\t  \"color\":\"#206fa7\"},
+    \"country\": \"Semakan Rayuan Asrama Penuh\",
+    \"visits\": 2000
+    ,\"color\":\"#206fa7\"},
  {
-    \"service\": \"eKahwin\",
+    \"country\": \"eKahwin\",
     \"visits\": 1800,
     \"color\":\"#206fa7\"
   }, {
-    \"service\": \"Semakan Saman\",
+    \"country\": \"Semakan Saman\",
     \"visits\": 1500,
     \"color\":\"#206fa7\"
   }, {
-    \"service\": \"e-Pengeluaran/ i-Akaun\",
+    \"country\": \"e-Pengeluaran/ i-Akaun\",
     \"visits\": 1200,
     \"color\":\"#206fa7\"
     
@@ -56,7 +56,7 @@ var chart = AmCharts.makeChart( \"chartdiv_top\", {
     \"gridAlpha\": 0.2,
     \"dashLength\": 0
   } ],
-  \"gridAboveGraphs\": true,
+  \"gridAboveGraphs\": false,
   \"startDuration\": 1,
   \"graphs\": [ {
     \"balloonText\": \"[[category]]: <b>[[value]]</b>\",
@@ -72,19 +72,17 @@ var chart = AmCharts.makeChart( \"chartdiv_top\", {
     \"cursorAlpha\": 0,
     \"zoomable\": false
   },
-  \"categoryField\": \"service\",
+  \"categoryField\": \"country\",
   \"categoryAxis\": {
     \"gridPosition\": \"start\",
     \"gridAlpha\": 0,
     \"tickPosition\": \"start\",
-    \"tickLength\": 20
+    \"tickLength\": 20,
+  \"labelsEnabled\": false
   },
   \"export\": {
     \"enabled\": true
-  },
-  \"responsive\": {
-        \"enabled\": true
-      }
+  }
 
 } );
 </script>";
@@ -118,25 +116,25 @@ var chart = AmCharts.makeChart( \"chartdiv_top\", {
 /* var chart = AmCharts.makeChart( "chartdiv_top", {*/
 /*   "type": "serial",*/
 /*   "theme": "light",*/
-/*   "fontSize":8,*/
 /*   "dataProvider": [ {*/
-/*     "service": "MyEG/ Replacement Identity Card",*/
+/*     "country": "MyEG/ Replacement Identity Card",*/
 /*     "visits": 2100,*/
+/*     "fontsize": 4,*/
 /*     "color":"#206fa7"*/
 /*   }, {*/
-/*     "service": "Semakan Rayuan Asrama Penuh",*/
-/*     "visits": 2000,*/
-/* 	  "color":"#206fa7"},*/
+/*     "country": "Semakan Rayuan Asrama Penuh",*/
+/*     "visits": 2000*/
+/*     ,"color":"#206fa7"},*/
 /*  {*/
-/*     "service": "eKahwin",*/
+/*     "country": "eKahwin",*/
 /*     "visits": 1800,*/
 /*     "color":"#206fa7"*/
 /*   }, {*/
-/*     "service": "Semakan Saman",*/
+/*     "country": "Semakan Saman",*/
 /*     "visits": 1500,*/
 /*     "color":"#206fa7"*/
 /*   }, {*/
-/*     "service": "e-Pengeluaran/ i-Akaun",*/
+/*     "country": "e-Pengeluaran/ i-Akaun",*/
 /*     "visits": 1200,*/
 /*     "color":"#206fa7"*/
 /*     */
@@ -146,7 +144,7 @@ var chart = AmCharts.makeChart( \"chartdiv_top\", {
 /*     "gridAlpha": 0.2,*/
 /*     "dashLength": 0*/
 /*   } ],*/
-/*   "gridAboveGraphs": true,*/
+/*   "gridAboveGraphs": false,*/
 /*   "startDuration": 1,*/
 /*   "graphs": [ {*/
 /*     "balloonText": "[[category]]: <b>[[value]]</b>",*/
@@ -162,19 +160,17 @@ var chart = AmCharts.makeChart( \"chartdiv_top\", {
 /*     "cursorAlpha": 0,*/
 /*     "zoomable": false*/
 /*   },*/
-/*   "categoryField": "service",*/
+/*   "categoryField": "country",*/
 /*   "categoryAxis": {*/
 /*     "gridPosition": "start",*/
 /*     "gridAlpha": 0,*/
 /*     "tickPosition": "start",*/
-/*     "tickLength": 20*/
+/*     "tickLength": 20,*/
+/*   "labelsEnabled": false*/
 /*   },*/
 /*   "export": {*/
 /*     "enabled": true*/
-/*   },*/
-/*   "responsive": {*/
-/*         "enabled": true*/
-/*       }*/
+/*   }*/
 /* */
 /* } );*/
 /* </script>*/

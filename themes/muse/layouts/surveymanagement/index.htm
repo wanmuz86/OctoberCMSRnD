@@ -1,0 +1,20 @@
+==
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+{% partial "header" %}
+{% page %}
+{% partial "footer" %}
+<!-- Scripts -->
+<script src="{{ 'assets/vendor/modernizr-2.6.1-respond-1.1.0.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/jquery-1.11.0.min.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/jquery.gmap3.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/plugins.js'|theme }}"></script>
+<script src="{{ 'assets/js/main.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}

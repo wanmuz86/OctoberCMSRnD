@@ -1,5 +1,6 @@
-1465356827s:648:"a:6:{s:5:"mtime";i:1465356175;s:7:"content";s:237:"title = "index.htm"
+1465380616s:718:"a:6:{s:5:"mtime";i:1465375090;s:7:"content";s:268:"title = "index.htm"
 url = "/surveyreport/"
+layout = "surveyreport/index"
 is_hidden = 0
 ==
 {% partial "layout" %}
@@ -7,7 +8,7 @@ is_hidden = 0
 'assets/css/font-awesome.css'
 ]|theme }}">
 {% partial "header" %}
-{% partial "footer" %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:9:"index.htm";s:3:"url";s:14:"/surveyreport/";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:173:"{% partial "layout" %}
+{% partial "footer" %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:9:"index.htm";s:3:"url";s:14:"/surveyreport/";s:6:"layout";s:18:"surveyreport/index";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:173:"{% partial "layout" %}
 <link rel="stylesheet" href="{{ ['assets/css/style.css',
 'assets/css/font-awesome.css'
 ]|theme }}">

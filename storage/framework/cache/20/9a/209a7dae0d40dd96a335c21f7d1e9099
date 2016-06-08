@@ -1,0 +1,5 @@
+1465380871s:409:"a:6:{s:5:"mtime";i:1465378353;s:7:"content";s:113:"title = "statistics/barresult"
+url = "/statistics/barresult"
+layout = "statistics/barresult"
+is_hidden = 0
+==";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:20:"statistics/barresult";s:3:"url";s:21:"/statistics/barresult";s:6:"layout";s:20:"statistics/barresult";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:0:"";}";

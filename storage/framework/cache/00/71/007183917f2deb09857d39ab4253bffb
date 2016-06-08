@@ -1,15 +1,10 @@
-1465357372s:656:"a:6:{s:5:"mtime";i:1465356336;s:7:"content";s:241:"title = "index.htm"
-url = "/surveymanagement/"
+1465380615s:643:"a:6:{s:5:"mtime";i:1465373455;s:7:"content";s:219:"title = "index.htm"
+url = "/surveymanagement/:service_id/:survey_id"
+layout = "surveymanagement/index"
 is_hidden = 0
+
+[poll]
+poll_id = "{{ :poll_id }}"
+service_id = "{{ :service_id }}"
 ==
-{% partial "layout" %}
-<link rel="stylesheet" href="{{ ['assets/css/style.css',
-'assets/css/font-awesome.css'
-]|theme }}">
-{% partial "header" %}
-{% partial "footer" %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:9:"index.htm";s:3:"url";s:18:"/surveymanagement/";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:173:"{% partial "layout" %}
-<link rel="stylesheet" href="{{ ['assets/css/style.css',
-'assets/css/font-awesome.css'
-]|theme }}">
-{% partial "header" %}
-{% partial "footer" %}";}";
+{% component 'poll' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:9:"index.htm";s:3:"url";s:40:"/surveymanagement/:service_id/:survey_id";s:6:"layout";s:22:"surveymanagement/index";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:4:"poll";a:2:{s:7:"poll_id";s:14:"{{ :poll_id }}";s:10:"service_id";s:17:"{{ :service_id }}";}}}s:4:"code";N;s:6:"markup";s:22:"{% component 'poll' %}";}";

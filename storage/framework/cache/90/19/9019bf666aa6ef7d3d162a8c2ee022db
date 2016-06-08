@@ -1,4 +1,4 @@
-1465357386s:3177:"a:6:{s:5:"mtime";i:1465355093;s:7:"content";s:1510:"[viewBag]
+1465380616s:3233:"a:6:{s:5:"mtime";i:1465379366;s:7:"content";s:1538:"[viewBag]
 ==
 
 <script src="{{ ['assets/amcharts/amcharts.js',
@@ -40,7 +40,7 @@ var chart = AmCharts.makeChart( "chartdiv2", {
     "gridAlpha": 0.2,
     "dashLength": 0
   } ],
-  "gridAboveGraphs": true,
+  "gridAboveGraphs": false,
   "startDuration": 1,
   "graphs": [ {
     "balloonText": "[[category]]: <b>[[value]]</b>",
@@ -60,7 +60,8 @@ var chart = AmCharts.makeChart( "chartdiv2", {
     "gridPosition": "start",
     "gridAlpha": 0,
     "tickPosition": "start",
-    "tickLength": 20
+    "tickLength": 20,
+  "labelsEnabled": false
   },
   "export": {
     "enabled": true
@@ -68,7 +69,7 @@ var chart = AmCharts.makeChart( "chartdiv2", {
 
 } );
 </script>
-";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:1491:"<script src="{{ ['assets/amcharts/amcharts.js',
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:1519:"<script src="{{ ['assets/amcharts/amcharts.js',
 'assets/amcharts/serial.js',
 'assets/amcharts/themes/light.js',
 'assets/amcharts/plugins/responsive/responsive.min.js'
@@ -107,7 +108,7 @@ var chart = AmCharts.makeChart( "chartdiv2", {
     "gridAlpha": 0.2,
     "dashLength": 0
   } ],
-  "gridAboveGraphs": true,
+  "gridAboveGraphs": false,
   "startDuration": 1,
   "graphs": [ {
     "balloonText": "[[category]]: <b>[[value]]</b>",
@@ -127,7 +128,8 @@ var chart = AmCharts.makeChart( "chartdiv2", {
     "gridPosition": "start",
     "gridAlpha": 0,
     "tickPosition": "start",
-    "tickLength": 20
+    "tickLength": 20,
+  "labelsEnabled": false
   },
   "export": {
     "enabled": true
