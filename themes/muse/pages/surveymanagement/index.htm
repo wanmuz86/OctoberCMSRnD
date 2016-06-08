@@ -1,10 +1,19 @@
 title = "index.htm"
-url = "/surveymanagement/"
+url = "/surveymanagement/:service_id/:survey_id"
 is_hidden = 0
+
+[poll]
+poll_id = "{{ :poll_id }}"
+service_id = "{{ :service_id }}"
 ==
 {% partial "layout" %}
 <link rel="stylesheet" href="{{ ['assets/css/style.css',
 'assets/css/font-awesome.css'
 ]|theme }}">
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
 {% partial "header" %}
+{% component 'poll' %}
 {% partial "footer" %}
