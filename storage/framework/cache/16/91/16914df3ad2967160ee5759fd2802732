@@ -1,0 +1,105 @@
+1465354712s:5943:"a:6:{s:5:"mtime";i:1465352123;s:7:"content";s:2894:" <div class="col-md-12 col-fix">
+                        <div class="widget-header widget-header-fix" style="background-color: #c65997;">
+
+                        <div class="col-md-4 col-fix">
+                          <div class="fa fa-list-alt pull-left"></div>
+                        </div>                        
+                          
+                        <div class="col-md-8 col-fix">
+                          <div>
+                          <h2>Lowest 5</h2>
+                          <p>Services satisfaction</p>
+                          </div>
+                        </div>
+                        <br/>
+                        </div> <!-- /widget-header -->                         
+                        <div class="widget-content widget-content-fix">
+                          <div>
+                            <div class="table-responsive">
+                               <table class="dashboardfront">
+                                <thead>
+                                  <tr>
+                                    <th>Service</th>
+                                    <th style="text-align:center">Percentage</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>E-Tribunal/ Marriage Registration</td>
+                                    <td style="text-align:center">11%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MyGST System</td>
+                                    <td style="text-align:center">17%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>CJP Online/ Sales Tax & Service Tax</td>
+                                    <td style="text-align:center">25%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MyOnline Maid</td>
+                                    <td style="text-align:center">33%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MyOnline Student/ Student Pass </td>
+                                    <td style="text-align:center">37%</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <a href="/satisfaction/lowsatisfaction"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+                          </div>  <!--/div-->
+                        </div> <!--/widget content-->
+                      </div>  <!--/widget-->";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:2893:"<div class="col-md-12 col-fix">
+                        <div class="widget-header widget-header-fix" style="background-color: #c65997;">
+
+                        <div class="col-md-4 col-fix">
+                          <div class="fa fa-list-alt pull-left"></div>
+                        </div>                        
+                          
+                        <div class="col-md-8 col-fix">
+                          <div>
+                          <h2>Lowest 5</h2>
+                          <p>Services satisfaction</p>
+                          </div>
+                        </div>
+                        <br/>
+                        </div> <!-- /widget-header -->                         
+                        <div class="widget-content widget-content-fix">
+                          <div>
+                            <div class="table-responsive">
+                               <table class="dashboardfront">
+                                <thead>
+                                  <tr>
+                                    <th>Service</th>
+                                    <th style="text-align:center">Percentage</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>E-Tribunal/ Marriage Registration</td>
+                                    <td style="text-align:center">11%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MyGST System</td>
+                                    <td style="text-align:center">17%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>CJP Online/ Sales Tax & Service Tax</td>
+                                    <td style="text-align:center">25%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MyOnline Maid</td>
+                                    <td style="text-align:center">33%</td>
+                                  </tr>
+                                  <tr>
+                                    <td>MyOnline Student/ Student Pass </td>
+                                    <td style="text-align:center">37%</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <a href="/satisfaction/lowsatisfaction"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+                          </div>  <!--/div-->
+                        </div> <!--/widget content-->
+                      </div>  <!--/widget-->";}";

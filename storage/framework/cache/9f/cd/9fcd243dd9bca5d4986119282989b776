@@ -1,0 +1,881 @@
+1465354006s:31878:"a:6:{s:5:"mtime";i:1465352787;s:7:"content";s:15817:"title = "Dashboard admin"
+url = "/admin/"
+description = "Viewing a single blog post"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = "0"
+categoryPage = "blog/category"
+==
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+<!-- admin menu bar -->
+<nav class="navbar">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#small-screens-menus">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+
+		<a class="navbar-brand" rel="home" href="/">
+			<img style="max-width:100px; margin-top: -7px;"
+			src="{{ 'assets/tmp/assets/1a96f8c4/logo.png'|theme }}">
+			<!-- <img alt="logo" id="profile-img" class="profile-img-card img-responsive center-block" src="{{asset('tmp/assets/1a96f8c4/logo.png')}}"  /> -->    </a>
+			
+		</div>
+
+	</div>
+
+	<!-- Only on xs screens -->
+	<div class="collapse navbar-collapse pull-left hidden-sm  hidden-md hidden-lg" id="small-screens-menus">
+		<ul class="nav navbar-nav hidden-sm  hidden-md hidden-lg">
+
+
+			<li><br/><br/></li>
+			<!-- active surveys -->
+			<li>
+				<a href="/index.php/admin/survey/sa/listsurveys/active/Y">
+					<?php echo $data['total_active_surveys']; ?> active surveys
+				</a>
+			</li>
+			<li>
+				<a href="/admin/profiles">
+					Create/Edit User Groups</a>
+				</li>
+				
+				<!-- List surveys -->
+				<li>
+					<a href="/survey/listSurvey">
+						List surveys                </a>
+					</li>
+
+					<!-- Logout -->
+					<li>
+						<a href="/logout">
+							Logout                </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="collapse navbar-collapse js-navbar-collapse pull-right">
+					<ul class="nav navbar-nav navbar-right">   
+
+						<!-- Configuration -->
+						<li class="dropdown mega-dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="icon-settings" ></span>
+								Settings<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu mega-dropdown-menu" id="mainmenu-dropdown">
+
+								<!-- System overview -->
+								<li class="col-sm-3">
+
+									<!-- System overview -->
+									<div class="box" id="systemoverview">
+										<div class="box-icon">
+											<span class="glyphicon glyphicon-info-sign" id="info-header"></span>
+										</div>
+										<div class="info">
+											<h5 class="text-center">System overview</h5>
+											<dl class="dl-horizontal">
+												<dt class="text-info">Users</dt>
+												<dd><?php echo $data['total_Users']; ?></dd>
+												<dt class="text-info">Surveys</dt>
+												<dd><?php echo $data['total_surveys']; ?></dd>
+												<dt class="text-info">Active surveys</dt>
+												<dd><?php echo $data['total_active_surveys']; ?></dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+
+								<!-- Expression Manager -->
+								<li class="col-sm-3">
+								</li>
+
+								<!-- Advanced -->
+								<li class="col-sm-2">
+								</li>
+
+
+								<!-- Users -->
+								<li class="col-sm-2">
+
+									<!-- Users -->
+									<ul>
+
+										<!-- Users -->
+										<li class="dropdown-header">
+
+											<span class="icon-user" ></span>
+											Users                </li>
+
+											<!-- Manage survey administrators -->
+											<li class="dropdown-item">
+												<a href="/admin/profiles">
+													Manage survey administrators                    </a>
+												</li>
+
+												<!-- Create/edit user groups -->
+												<li class="dropdown-item">
+													<a href="/index.php/admin/usergroups/sa/index">
+														Create/edit user groups                    </a>
+													</li>
+
+													<!-- Central participant database/panel -->
+													<li class="dropdown-item">
+														<a href="/index.php/admin/participants/sa/displayParticipants">
+															Central participant database/panel                    </a>
+														</li>
+													</ul>
+												</li>
+
+
+
+												<!-- Settings -->
+												<li class="col-sm-2">
+													<ul>
+
+														<!-- Settings -->
+														<li class="dropdown-header">
+															<span class="icon-global" ></span>
+															Settings                </li>
+
+															<!-- Global settings -->
+															<li class="dropdown-item">
+																<a href="/index.php/admin/globalsettings">
+																	Global settings                    </a>
+																</li>
+
+																<!-- Edit label sets -->
+																<li class="dropdown-item">
+																	<a href="/index.php/admin/labels/sa/view">
+																		Edit label sets                    </a>
+																	</li>
+
+																	<!-- Template Editor -->
+																	<li class="dropdown-item">
+																		<a href="/index.php/admin/templates/sa/view">
+																			Template editor                    </a>
+																		</li>
+																	</ul>
+																</li>
+
+
+															</ul>
+														</li>
+
+														<!-- user menu -->
+														<li class="dropdown">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >Agency <span class="caret"></span></a>
+															<ul class="dropdown-menu" role="menu">
+
+																<!-- Edit your personal preferences -->
+																<li>
+																	<a href="/index.php/admin/user/sa/personalsettings">Edit your personal preferences</a>
+																</li>
+
+																<li class="divider"></li>
+
+																<!-- Logout -->
+																<li>
+																	<li><a href="/logout">Logout</a></li>
+																</li>
+															</ul>
+														</li>
+
+														
+													</ul>
+												</div><!-- /.nav-collapse -->
+												
+
+											</nav>
+											<!--up menu-->
+											<div class="subnavbar">
+
+												<div class="subnavbar-inner">
+													
+													<div class="container" align="center">
+
+														<ul class="mainnav">
+															
+
+															<li class="dropdown @yield('link_home') link-red b-right"> 
+															<a href="{{ '/'|page }}">       
+																	<i><img src="{{ 'assets/images/menu/survey.png'|theme }}" /></i>
+																	<span>Dashboard</span>
+																</a>                    
+															</li>
+
+															<li class="dropdown @yield('link_survey') link-red b-right">
+																<a href="/survey/listSurvey">
+																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>
+																	<span>Survey Management</span>
+																</a>            
+															</li>
+
+															<li class="dropdown @yield('link_setting') link-red b-right">
+																<a href="/management/surveymanagement">           
+																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>
+																	<span>Survey Report</span>
+																</a> 
+															</li>
+
+															<li class="dropdown @yield('link_statistic') link-red b-right">         
+																<a href="/statistic/selection">
+																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>
+																	<span>Statistics</span>
+																</a>                    
+															</li>
+															
+														</ul>
+
+													</div><!-- /container --> 
+
+												</div><!-- /subnavbar-inner --> 
+
+											</div><!-- /subnavbar -->
+
+											<!--end up menu-->
+
+
+											<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>
+
+
+											<!-- Full page, started in Survey_Common_Action::render_wrapped_template() -->
+											<div class="container-fluid full-page-wrapper" id="in_survey_common_action">
+												<!--tambahan-->
+												<!--end-->
+												<div class="row">
+													<!-- Welcome view -->
+													<div class="container-fluid welcome full-page-wrapper">
+
+														<!-- Dashboard-->
+														<div class="main">
+
+															<div class="main-inner">
+
+																<div class="container">
+
+																	<div class="row">
+
+																		<div class="col-md-12 col-fix">
+
+																			<div class="widget">  
+
+																				<!-- widget-header -->
+
+																				<div class="widget-content col-lg-12 col-lg-12-fix"> 
+																					<!-- Main Content -->
+
+
+																					<div class="col-md-12 col-fix">
+
+																						<div class="col-md-1 col-fix"></div> 
+
+																						<!-- Bookings -->
+																						<div class="col-md-3 col-fix">
+																							<div class="col-md-12 col-fix">
+																								<div class="widget-header widget-header-fix" style="background-color: #5999c6;">                                   
+																									<div class="col-md-4 col-fix">
+																										<div class="fa fa-long-arrow-up pull-left"></div>
+																									</div>
+
+																									<div class="col-md-8 col-fix">
+																										<div><h2>Top</h2>
+																											<p>Service usage</p>
+																										</div>
+																									</div>
+
+																								</div> <!-- /widget-header -->                         
+																								<div class="widget-content widget-content-fix">
+																									<div>
+																										<!--amchart-->
+																										{% partial "admin/dashboard_top_service" %}
+																										<a href="/chart/topService"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+																									</div>  <!--/div-->
+																								</div> <!--/widget content-->
+																							</div>  <!--/widget-->
+																						</div> <!-- /span -->
+																						<!-- /Bookings -->
+
+																						<!-- Cancellations -->
+																						<div class="col-md-3 col-fix">
+																							<div class="col-md-12 col-fix">
+																								<div class="widget-header widget-header-fix" style="background-color: #93278f;">
+																									<div class="col-md-4 col-fix">
+																										<div class="fa fa-long-arrow-down pull-left"></div>
+																									</div>                        
+
+																									<div class="col-md-8 col-fix">
+																										<div><h2>Lowest</h2>
+																											<p> Service usage</p>
+																										</div>
+																									</div>                          
+
+																								</div> <!-- /widget-header -->                         
+																								<div class="widget-content widget-content-fix">
+																									<div>
+																										{% partial "admin/dashboard_low_service" %}
+																										<a href="/chart/lowestservice"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+																									</div>  <!--/div-->
+																								</div> <!--/widget content-->
+																							</div>  <!--/widget-->  
+																						</div> <!-- /span -->
+																						<!-- /Cancellations -->
+
+																						<!-- P&L -->
+																						<div class="col-md-3 col-fix">
+																							<div class="col-md-12 col-fix">
+																								<div class="widget-header widget-header-fix" style="background-color: #f5a533;">
+
+																									<div class="col-md-4 col-fix">
+																										<div class="fa fa-smile-o pull-left"></div>
+																									</div>                        
+
+																									<div class="col-md-8 col-fix">
+																										<div>
+																											<h2>Overall</h2>
+																											<p>satisfaction rate </p>
+																										</div>
+																									</div>
+																									<br/>
+																								</div> <!-- /widget-header -->                         
+																								<div class="widget-content widget-content-fix">
+																									<div>
+																										<h3>72.3%</h3>
+																										<br />
+																										<br />
+																										<br />
+																										<br />
+																										<br />
+																										<br />
+
+																										<a href="/chart/overallSatisfaction"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+																									</div>  <!--/div-->
+																								</div> <!--/widget content-->
+																							</div>  <!--/widget-->
+																						</div> <!-- /span -->
+																						<!-- /P&L -->
+
+
+																						<div class="col-md-1 col-fix"></div>
+
+																					</div>
+
+																					<div class="col-md-12 col-fix">
+
+																						<div class="col-md-3 col-fix"></div> 
+
+
+																						<!-- Statistics -->
+																						<div class="col-md-3 col-fix">
+																							{% partial "admin/dashboard_top_satisfaction" %}
+																						</div>
+
+																						<!-- /Statistics -->  
+
+																						<!-- P&L -->
+																						<div class="col-md-3 col-fix">
+																							{% partial "admin/dashboard_low_satisfaction" %}
+																						</div> <!-- /span -->
+																						<!-- /P&L -->  
+
+																						<div class="col-md-3 col-fix"></div>                
+
+
+
+
+																					</div>
+
+																				</div>
+
+																			</div> <!-- /widget-content-->
+
+																		</div> <!-- /widget-->
+
+																	</div> <!-- /span12 -->   
+
+																</div><!-- /row  -->
+
+															</div><!-- /container -->
+
+														</div><!-- /main-inner --> 
+
+													</div><!-- /main --> 
+												</div><!--row-->
+
+												<!-- Notification setting -->
+												<input type="hidden" id="absolute_notification" />
+											</div></div>
+											<!-- Footer -->
+											<footer class='footer'>
+												<div class="container-fluid">
+													<div class="row">
+														<!-- Link to manual -->
+														<div class="col-xs-6 col-md-4 col-lg-1 ">
+															
+														</div>
+
+														<!-- Support / Donate -->
+														<div  class="col-xs-6 col-md-4  col-lg-5 text-right"  >
+															<a href='http://donate.limesurvey.org'>
+																<img alt='Support this project: Donate to LimeSurvey' title='Support this project: Donate to LimeSurvey!' src="{{ 'assets/images/footer.png'|theme }}">
+															</a>
+														</div>
+
+														<!-- Lime survey website -->
+														<div class="col-xs-6 col-md-4 col-lg-6 text-right">
+															<a  title='Visit our website!' href='' target='_blank'>MDEC</a><br />Survey Forms 1.0</div>
+														</div>
+													</div>
+												</footer>
+
+												<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+												@yield('custom_footer_js')
+												@yield('custom_footer')
+												@endsection";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:15:"Dashboard admin";s:3:"url";s:7:"/admin/";s:11:"description";s:26:"Viewing a single blog post";s:9:"is_hidden";s:1:"0";s:10:"components";a:2:{s:8:"blogPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:13:"blog/category";}s:14:"blogCategories";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:13:"blog/category";}}}s:4:"code";N;s:6:"markup";s:15548:"{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+<!-- admin menu bar -->
+<nav class="navbar">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#small-screens-menus">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+
+		<a class="navbar-brand" rel="home" href="/">
+			<img style="max-width:100px; margin-top: -7px;"
+			src="{{ 'assets/tmp/assets/1a96f8c4/logo.png'|theme }}">
+			<!-- <img alt="logo" id="profile-img" class="profile-img-card img-responsive center-block" src="{{asset('tmp/assets/1a96f8c4/logo.png')}}"  /> -->    </a>
+			
+		</div>
+
+	</div>
+
+	<!-- Only on xs screens -->
+	<div class="collapse navbar-collapse pull-left hidden-sm  hidden-md hidden-lg" id="small-screens-menus">
+		<ul class="nav navbar-nav hidden-sm  hidden-md hidden-lg">
+
+
+			<li><br/><br/></li>
+			<!-- active surveys -->
+			<li>
+				<a href="/index.php/admin/survey/sa/listsurveys/active/Y">
+					<?php echo $data['total_active_surveys']; ?> active surveys
+				</a>
+			</li>
+			<li>
+				<a href="/admin/profiles">
+					Create/Edit User Groups</a>
+				</li>
+				
+				<!-- List surveys -->
+				<li>
+					<a href="/survey/listSurvey">
+						List surveys                </a>
+					</li>
+
+					<!-- Logout -->
+					<li>
+						<a href="/logout">
+							Logout                </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="collapse navbar-collapse js-navbar-collapse pull-right">
+					<ul class="nav navbar-nav navbar-right">   
+
+						<!-- Configuration -->
+						<li class="dropdown mega-dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="icon-settings" ></span>
+								Settings<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu mega-dropdown-menu" id="mainmenu-dropdown">
+
+								<!-- System overview -->
+								<li class="col-sm-3">
+
+									<!-- System overview -->
+									<div class="box" id="systemoverview">
+										<div class="box-icon">
+											<span class="glyphicon glyphicon-info-sign" id="info-header"></span>
+										</div>
+										<div class="info">
+											<h5 class="text-center">System overview</h5>
+											<dl class="dl-horizontal">
+												<dt class="text-info">Users</dt>
+												<dd><?php echo $data['total_Users']; ?></dd>
+												<dt class="text-info">Surveys</dt>
+												<dd><?php echo $data['total_surveys']; ?></dd>
+												<dt class="text-info">Active surveys</dt>
+												<dd><?php echo $data['total_active_surveys']; ?></dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+
+								<!-- Expression Manager -->
+								<li class="col-sm-3">
+								</li>
+
+								<!-- Advanced -->
+								<li class="col-sm-2">
+								</li>
+
+
+								<!-- Users -->
+								<li class="col-sm-2">
+
+									<!-- Users -->
+									<ul>
+
+										<!-- Users -->
+										<li class="dropdown-header">
+
+											<span class="icon-user" ></span>
+											Users                </li>
+
+											<!-- Manage survey administrators -->
+											<li class="dropdown-item">
+												<a href="/admin/profiles">
+													Manage survey administrators                    </a>
+												</li>
+
+												<!-- Create/edit user groups -->
+												<li class="dropdown-item">
+													<a href="/index.php/admin/usergroups/sa/index">
+														Create/edit user groups                    </a>
+													</li>
+
+													<!-- Central participant database/panel -->
+													<li class="dropdown-item">
+														<a href="/index.php/admin/participants/sa/displayParticipants">
+															Central participant database/panel                    </a>
+														</li>
+													</ul>
+												</li>
+
+
+
+												<!-- Settings -->
+												<li class="col-sm-2">
+													<ul>
+
+														<!-- Settings -->
+														<li class="dropdown-header">
+															<span class="icon-global" ></span>
+															Settings                </li>
+
+															<!-- Global settings -->
+															<li class="dropdown-item">
+																<a href="/index.php/admin/globalsettings">
+																	Global settings                    </a>
+																</li>
+
+																<!-- Edit label sets -->
+																<li class="dropdown-item">
+																	<a href="/index.php/admin/labels/sa/view">
+																		Edit label sets                    </a>
+																	</li>
+
+																	<!-- Template Editor -->
+																	<li class="dropdown-item">
+																		<a href="/index.php/admin/templates/sa/view">
+																			Template editor                    </a>
+																		</li>
+																	</ul>
+																</li>
+
+
+															</ul>
+														</li>
+
+														<!-- user menu -->
+														<li class="dropdown">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >Agency <span class="caret"></span></a>
+															<ul class="dropdown-menu" role="menu">
+
+																<!-- Edit your personal preferences -->
+																<li>
+																	<a href="/index.php/admin/user/sa/personalsettings">Edit your personal preferences</a>
+																</li>
+
+																<li class="divider"></li>
+
+																<!-- Logout -->
+																<li>
+																	<li><a href="/logout">Logout</a></li>
+																</li>
+															</ul>
+														</li>
+
+														
+													</ul>
+												</div><!-- /.nav-collapse -->
+												
+
+											</nav>
+											<!--up menu-->
+											<div class="subnavbar">
+
+												<div class="subnavbar-inner">
+													
+													<div class="container" align="center">
+
+														<ul class="mainnav">
+															
+
+															<li class="dropdown @yield('link_home') link-red b-right"> 
+															<a href="{{ '/'|page }}">       
+																	<i><img src="{{ 'assets/images/menu/survey.png'|theme }}" /></i>
+																	<span>Dashboard</span>
+																</a>                    
+															</li>
+
+															<li class="dropdown @yield('link_survey') link-red b-right">
+																<a href="/survey/listSurvey">
+																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>
+																	<span>Survey Management</span>
+																</a>            
+															</li>
+
+															<li class="dropdown @yield('link_setting') link-red b-right">
+																<a href="/management/surveymanagement">           
+																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>
+																	<span>Survey Report</span>
+																</a> 
+															</li>
+
+															<li class="dropdown @yield('link_statistic') link-red b-right">         
+																<a href="/statistic/selection">
+																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>
+																	<span>Statistics</span>
+																</a>                    
+															</li>
+															
+														</ul>
+
+													</div><!-- /container --> 
+
+												</div><!-- /subnavbar-inner --> 
+
+											</div><!-- /subnavbar -->
+
+											<!--end up menu-->
+
+
+											<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>
+
+
+											<!-- Full page, started in Survey_Common_Action::render_wrapped_template() -->
+											<div class="container-fluid full-page-wrapper" id="in_survey_common_action">
+												<!--tambahan-->
+												<!--end-->
+												<div class="row">
+													<!-- Welcome view -->
+													<div class="container-fluid welcome full-page-wrapper">
+
+														<!-- Dashboard-->
+														<div class="main">
+
+															<div class="main-inner">
+
+																<div class="container">
+
+																	<div class="row">
+
+																		<div class="col-md-12 col-fix">
+
+																			<div class="widget">  
+
+																				<!-- widget-header -->
+
+																				<div class="widget-content col-lg-12 col-lg-12-fix"> 
+																					<!-- Main Content -->
+
+
+																					<div class="col-md-12 col-fix">
+
+																						<div class="col-md-1 col-fix"></div> 
+
+																						<!-- Bookings -->
+																						<div class="col-md-3 col-fix">
+																							<div class="col-md-12 col-fix">
+																								<div class="widget-header widget-header-fix" style="background-color: #5999c6;">                                   
+																									<div class="col-md-4 col-fix">
+																										<div class="fa fa-long-arrow-up pull-left"></div>
+																									</div>
+
+																									<div class="col-md-8 col-fix">
+																										<div><h2>Top</h2>
+																											<p>Service usage</p>
+																										</div>
+																									</div>
+
+																								</div> <!-- /widget-header -->                         
+																								<div class="widget-content widget-content-fix">
+																									<div>
+																										<!--amchart-->
+																										{% partial "admin/dashboard_top_service" %}
+																										<a href="/chart/topService"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+																									</div>  <!--/div-->
+																								</div> <!--/widget content-->
+																							</div>  <!--/widget-->
+																						</div> <!-- /span -->
+																						<!-- /Bookings -->
+
+																						<!-- Cancellations -->
+																						<div class="col-md-3 col-fix">
+																							<div class="col-md-12 col-fix">
+																								<div class="widget-header widget-header-fix" style="background-color: #93278f;">
+																									<div class="col-md-4 col-fix">
+																										<div class="fa fa-long-arrow-down pull-left"></div>
+																									</div>                        
+
+																									<div class="col-md-8 col-fix">
+																										<div><h2>Lowest</h2>
+																											<p> Service usage</p>
+																										</div>
+																									</div>                          
+
+																								</div> <!-- /widget-header -->                         
+																								<div class="widget-content widget-content-fix">
+																									<div>
+																										{% partial "admin/dashboard_low_service" %}
+																										<a href="/chart/lowestservice"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+																									</div>  <!--/div-->
+																								</div> <!--/widget content-->
+																							</div>  <!--/widget-->  
+																						</div> <!-- /span -->
+																						<!-- /Cancellations -->
+
+																						<!-- P&L -->
+																						<div class="col-md-3 col-fix">
+																							<div class="col-md-12 col-fix">
+																								<div class="widget-header widget-header-fix" style="background-color: #f5a533;">
+
+																									<div class="col-md-4 col-fix">
+																										<div class="fa fa-smile-o pull-left"></div>
+																									</div>                        
+
+																									<div class="col-md-8 col-fix">
+																										<div>
+																											<h2>Overall</h2>
+																											<p>satisfaction rate </p>
+																										</div>
+																									</div>
+																									<br/>
+																								</div> <!-- /widget-header -->                         
+																								<div class="widget-content widget-content-fix">
+																									<div>
+																										<h3>72.3%</h3>
+																										<br />
+																										<br />
+																										<br />
+																										<br />
+																										<br />
+																										<br />
+
+																										<a href="/chart/overallSatisfaction"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+																									</div>  <!--/div-->
+																								</div> <!--/widget content-->
+																							</div>  <!--/widget-->
+																						</div> <!-- /span -->
+																						<!-- /P&L -->
+
+
+																						<div class="col-md-1 col-fix"></div>
+
+																					</div>
+
+																					<div class="col-md-12 col-fix">
+
+																						<div class="col-md-3 col-fix"></div> 
+
+
+																						<!-- Statistics -->
+																						<div class="col-md-3 col-fix">
+																							{% partial "admin/dashboard_top_satisfaction" %}
+																						</div>
+
+																						<!-- /Statistics -->  
+
+																						<!-- P&L -->
+																						<div class="col-md-3 col-fix">
+																							{% partial "admin/dashboard_low_satisfaction" %}
+																						</div> <!-- /span -->
+																						<!-- /P&L -->  
+
+																						<div class="col-md-3 col-fix"></div>                
+
+
+
+
+																					</div>
+
+																				</div>
+
+																			</div> <!-- /widget-content-->
+
+																		</div> <!-- /widget-->
+
+																	</div> <!-- /span12 -->   
+
+																</div><!-- /row  -->
+
+															</div><!-- /container -->
+
+														</div><!-- /main-inner --> 
+
+													</div><!-- /main --> 
+												</div><!--row-->
+
+												<!-- Notification setting -->
+												<input type="hidden" id="absolute_notification" />
+											</div></div>
+											<!-- Footer -->
+											<footer class='footer'>
+												<div class="container-fluid">
+													<div class="row">
+														<!-- Link to manual -->
+														<div class="col-xs-6 col-md-4 col-lg-1 ">
+															
+														</div>
+
+														<!-- Support / Donate -->
+														<div  class="col-xs-6 col-md-4  col-lg-5 text-right"  >
+															<a href='http://donate.limesurvey.org'>
+																<img alt='Support this project: Donate to LimeSurvey' title='Support this project: Donate to LimeSurvey!' src="{{ 'assets/images/footer.png'|theme }}">
+															</a>
+														</div>
+
+														<!-- Lime survey website -->
+														<div class="col-xs-6 col-md-4 col-lg-6 text-right">
+															<a  title='Visit our website!' href='' target='_blank'>MDEC</a><br />Survey Forms 1.0</div>
+														</div>
+													</div>
+												</footer>
+
+												<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+												@yield('custom_footer_js')
+												@yield('custom_footer')
+												@endsection";}";

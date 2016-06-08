@@ -1,0 +1,15 @@
+1465355159s:621:"a:6:{s:5:"mtime";i:1465354556;s:7:"content";s:224:"title = "index.htm"
+url = "/"
+is_hidden = 0
+==
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+{% partial "header" %}
+{% partial "footer" %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:9:"index.htm";s:3:"url";s:1:"/";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:173:"{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+{% partial "header" %}
+{% partial "footer" %}";}";

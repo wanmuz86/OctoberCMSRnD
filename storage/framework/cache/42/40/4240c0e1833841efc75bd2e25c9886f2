@@ -1,0 +1,108 @@
+1465312040s:4489:"a:6:{s:5:"mtime";i:1465275849;s:7:"content";s:2107:"title = "Promo Page"
+url = "/promo-page"
+description = "Promo page"
+is_hidden = 0
+
+[builderList promoList]
+modelClass = "MeTechSolutionSdnBhd\Promotion\Models\Promotion"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "promo"
+detailsKeyColumn = "id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% set records = promoList.records %}
+{% set displayColumn = promoList.displayColumn %}
+{% set noRecordsMessage = promoList.noRecordsMessage %}
+{% set detailsPage = promoList.detailsPage %}
+{% set detailsKeyColumn = promoList.detailsKeyColumn %}
+{% set detailsUrlParameter = promoList.detailsUrlParameter %}
+
+<ul class="record-list">
+    {% for record in records %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+                {% endif %}
+
+                {{ attribute(record, displayColumn) }}
+
+                {% if detailsPage %}
+                    </a>
+                    
+                    
+                {% endif %}
+            {% endspaceless %}
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if records.lastPage > 1 %}
+    <ul class="pagination">
+        {% if records.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if records.lastPage > records.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:10:"Promo Page";s:3:"url";s:11:"/promo-page";s:11:"description";s:10:"Promo page";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:21:"builderList promoList";a:8:{s:10:"modelClass";s:47:"MeTechSolutionSdnBhd\Promotion\Models\Promotion";s:5:"scope";s:1:"-";s:13:"displayColumn";s:5:"title";s:16:"noRecordsMessage";s:16:"No records found";s:11:"detailsPage";s:5:"promo";s:16:"detailsKeyColumn";s:2:"id";s:19:"detailsUrlParameter";s:2:"id";s:10:"pageNumber";s:11:"{{ :page }}";}}}s:4:"code";N;s:6:"markup";s:1760:"{% set records = promoList.records %}
+{% set displayColumn = promoList.displayColumn %}
+{% set noRecordsMessage = promoList.noRecordsMessage %}
+{% set detailsPage = promoList.detailsPage %}
+{% set detailsKeyColumn = promoList.detailsKeyColumn %}
+{% set detailsUrlParameter = promoList.detailsUrlParameter %}
+
+<ul class="record-list">
+    {% for record in records %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            {% spaceless %}
+                {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}">
+                {% endif %}
+
+                {{ attribute(record, displayColumn) }}
+
+                {% if detailsPage %}
+                    </a>
+                    
+                    
+                {% endif %}
+            {% endspaceless %}
+        </li>
+    {% else %}
+        <li class="no-data">{{ noRecordsMessage }}</li>
+    {% endfor %}
+</ul>
+
+{% if records.lastPage > 1 %}
+    <ul class="pagination">
+        {% if records.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if records.lastPage > records.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}";}";

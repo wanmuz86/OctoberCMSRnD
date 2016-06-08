@@ -1,0 +1,109 @@
+1465354712s:6083:"a:6:{s:5:"mtime";i:1465351975;s:7:"content";s:2969:"[viewBag]
+==
+ <div class="col-md-12 col-fix">
+                        <div class="widget-header widget-header-fix" style="background-color: #64d8c4;">
+
+                        <div class="col-md-4 col-fix">
+                          <div class="fa fa-list-alt pull-left"></div>
+                        </div>                        
+                          
+                        <div class="col-md-8 col-fix">
+                          <div>
+                           <h2>Top 5</h2>
+                          <p>Services satisfaction</p>
+                          </div>
+                        </div>                           
+                          
+                        </div> <!-- /widget-header -->                         
+                        <div class="widget-content widget-content-fix">
+                          <div>
+                            <div class="table-responsive">
+                             <table class="dashboardfront">
+                                  <thead>
+                                    <tr>
+                                      <th>Service</th>
+                                      <th style="text-align:center">Percentage</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>MyEG/ Replacement Identity Card </td>
+                                      <td style="text-align:center">89%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>mySIKAP</td>
+                                      <td style="text-align:center">78%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>MyEG/ MyDrivingLicense</td>
+                                      <td style="text-align:center">76%</td>
+                                    </tr>
+                                    <tr>
+                                      <td> MyVehicle</td>
+                                      <td style="text-align:center">75%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>e-Pengeluaran/ i-Akaun</td>
+                                      <td style="text-align:center">70%</td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                            </div>
+                            <a href="/satisfaction/topsatisfaction"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+                          </div>  <!--/div-->
+                        </div> <!--/widget content-->
+                      </div>  <!--/widget-->
+           
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:2938:"<div class="col-md-12 col-fix">
+                        <div class="widget-header widget-header-fix" style="background-color: #64d8c4;">
+
+                        <div class="col-md-4 col-fix">
+                          <div class="fa fa-list-alt pull-left"></div>
+                        </div>                        
+                          
+                        <div class="col-md-8 col-fix">
+                          <div>
+                           <h2>Top 5</h2>
+                          <p>Services satisfaction</p>
+                          </div>
+                        </div>                           
+                          
+                        </div> <!-- /widget-header -->                         
+                        <div class="widget-content widget-content-fix">
+                          <div>
+                            <div class="table-responsive">
+                             <table class="dashboardfront">
+                                  <thead>
+                                    <tr>
+                                      <th>Service</th>
+                                      <th style="text-align:center">Percentage</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>MyEG/ Replacement Identity Card </td>
+                                      <td style="text-align:center">89%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>mySIKAP</td>
+                                      <td style="text-align:center">78%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>MyEG/ MyDrivingLicense</td>
+                                      <td style="text-align:center">76%</td>
+                                    </tr>
+                                    <tr>
+                                      <td> MyVehicle</td>
+                                      <td style="text-align:center">75%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>e-Pengeluaran/ i-Akaun</td>
+                                      <td style="text-align:center">70%</td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                            </div>
+                            <a href="/satisfaction/topsatisfaction"><span class="pull-left">View Details ></span><span class="pull-right"><i class="fa fa-arrow-circle-o-right"></i></span></a>
+                          </div>  <!--/div-->
+                        </div> <!--/widget content-->
+                      </div>  <!--/widget-->";}";
