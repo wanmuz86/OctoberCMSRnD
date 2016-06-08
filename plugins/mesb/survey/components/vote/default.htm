@@ -16,8 +16,8 @@
         <div class="checkbox"><label for="{{poll['id']}}-{{ answer }}"><input id="{{poll['id']}}-{{ answer }}" type="radio" name="vote_answer_{{poll['id']}}" value="{{ answer }}" /> {{ key }}</label></div>
         {% endfor %}
         {% elseif poll.type_id == 2 %}
-        <div class="checkbox"><label for="{{poll['id']}}-yes"><input id="{{poll['id']}}-yes" type="radio" name="vote_answer_{{poll['id']}}" value="yes" /> Ya</label></div>
-        <div class="checkbox"><label for="{{poll['id']}}-no"><input id="{{poll['id']}}-no" type="radio" name="vote_answer_{{poll['id']}}" value="no" /> Tidak</label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-yes"><input id="{{poll['id']}}-yes" type="radio" name="vote_answer_{{poll['id']}}" value="1" /> Ya</label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-no"><input id="{{poll['id']}}-no" type="radio" name="vote_answer_{{poll['id']}}" value="2" /> Tidak</label></div>
         {% elseif poll.type_id == 3 %}
 
         <div class="checkbox"><label for="{{poll['id']}}-1"><input id="{{poll['id']}}-1" type="radio" name="vote_answer_{{poll['id']}}" value="1" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-1.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>
@@ -30,11 +30,11 @@
     {% endfor %}
         <button type="submit" class="btn btn-default">Vote</button>
     </div>
-
+</form>
     <div class="confirm-container-{{ survey['id'] }}">
         <!--This will contain the poll result -->
     </div>
-</form>
+
 <div id="result"></div>
 
 

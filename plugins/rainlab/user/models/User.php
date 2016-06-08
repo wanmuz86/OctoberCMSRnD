@@ -4,6 +4,7 @@ use Mail;
 use Event;
 use October\Rain\Auth\Models\User as UserBase;
 use RainLab\User\Models\Settings as UserSettings;
+use Mesb\Muse\Agency;
 
 class User extends UserBase
 {
@@ -248,5 +249,16 @@ class User extends UserBase
     public function getLastSeen()
     {
         return $this->last_login ?: $this->created_at;
+    }
+    public function getAgencyIdOptions()
+    {
+        $agencies = \Mesb\Muse\Models\Agency::all(['id', 'name']);
+        $agenciesOptions = [];
+
+        $agencies->each(function($agency) use (&$agenciesOptions) {
+            $agenciesOptions[$agency->id] = $agency->name;
+        });
+
+        return $agenciesOptions;
     }
 }

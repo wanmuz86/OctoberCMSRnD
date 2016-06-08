@@ -90,16 +90,8 @@ class Vote extends ComponentBase
     public function onPoll()
     {
         $this->request = Request::createFromGlobals();
-       /* $rules = ['vote_answer' => 'required'];
-        $validation = Validator::make(post(), $rules);
-
-        if ($validation->fails())
-        {
-            throw new ValidationException($validation);
-        }
-        else
-        {*/
-            foreach (post('polls') as $poll) {
+  
+          foreach (post('polls') as $poll) {
                 $addVote = new Polls;
                 $addVote->poll_id = ($poll['id'] );
                 $addVote->service_id = post('service');
@@ -110,6 +102,6 @@ class Vote extends ComponentBase
         $this->page['vote'] = new Polls;
         $this->latestPoll = $this->page['latestPoll'] = Question::getLatestPoll($poll['survey_id']);
         $this->latestPollAnswers = $this->page['latestPollAnswers'] = Question::getLatestPollAnswers($poll['survey_id']);
-        }
-    //}
+	}
+    
 }
