@@ -1,0 +1,66 @@
+1465375275s:3729:"a:2:{s:5:"mtime";i:1465374669;s:7:"content";s:3674:"<html>
+<body>
+<style>
+.widget-content {
+    padding: 20px 15px 15px;
+    background: #FFF;
+    border: 1px solid #D5D5D5;
+    -moz-c: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<div class="container">
+<div class="widget-content">
+<h1>{{ currentSurvey.name }}</h1>
+<h3>{{ currentSurvey.description }}</h3>
+<h4>{{currentService.name}}</h4>
+<div id="errors"></div>
+<form data-request="onPoll"
+      data-request-data="polls: {{ latestPoll }}, service: {{ currentService.id }}"
+      data-request-update="'{{ __SELF__ }}::result': '.confirm-container-{{ survey['id'] }}'"
+      data-request-success="$('.form-{{ survey['id'] }}').hide(1000)">
+    <div class="form-{{survey['id']}}">
+    {% for poll in latestPoll %}
+
+    <h4>{{ poll.question }}</h4>
+{% if poll.type_id == 1 %}
+        {% for answer, key in latestPollAnswers[poll.id] %}
+
+        <div class="checkbox"><label for="{{poll['id']}}-{{ answer }}"><input id="{{poll['id']}}-{{ answer }}" type="radio" name="vote_answer_{{poll['id']}}" value="{{ answer }}" /> {{ key }}</label></div>
+        {% endfor %}
+        {% elseif poll.type_id == 2 %}
+        <div class="checkbox"><label for="{{poll['id']}}-yes"><input id="{{poll['id']}}-yes" type="radio" name="vote_answer_{{poll['id']}}" value="yes" /> Ya</label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-no"><input id="{{poll['id']}}-no" type="radio" name="vote_answer_{{poll['id']}}" value="no" /> Tidak</label></div>
+        {% elseif poll.type_id == 3 %}
+
+        <div class="checkbox"><label for="{{poll['id']}}-1"><input id="{{poll['id']}}-1" type="radio" name="vote_answer_{{poll['id']}}" value="1" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-1.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-2"><input id="{{poll['id']}}-2" type="radio" name="vote_answer_{{poll['id']}}" value="2" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-2.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-3"><input id="{{poll['id']}}-3" type="radio" name="vote_answer_{{poll['id']}}" value="3" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-3.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-4"><input id="{{poll['id']}}-4" type="radio" name="vote_answer_{{poll['id']}}" value="4" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-4.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>
+        <div class="checkbox"><label for="{{poll['id']}}-5"><input id="{{poll['id']}}-5" type="radio" name="vote_answer_{{poll['id']}}" value="5" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-5.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>
+
+        {% endif %}
+    {% endfor %}
+        <button type="submit" class="btn btn-success">Vote</button>
+    </div>
+    </div>
+
+    <div class="confirm-container-{{ survey['id'] }}">
+        <!--This will contain the poll result -->
+    </div>
+</form>
+<div id="result"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+</div>
+</body>
+</html>
+
+
+";}";

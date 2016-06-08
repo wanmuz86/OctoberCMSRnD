@@ -54,7 +54,7 @@ var chart = AmCharts.makeChart( \"chartdiv2\", {
     \"gridAlpha\": 0.2,
     \"dashLength\": 0
   } ],
-  \"gridAboveGraphs\": true,
+  \"gridAboveGraphs\": false,
   \"startDuration\": 1,
   \"graphs\": [ {
     \"balloonText\": \"[[category]]: <b>[[value]]</b>\",
@@ -74,7 +74,8 @@ var chart = AmCharts.makeChart( \"chartdiv2\", {
     \"gridPosition\": \"start\",
     \"gridAlpha\": 0,
     \"tickPosition\": \"start\",
-    \"tickLength\": 20
+    \"tickLength\": 20,
+  \"labelsEnabled\": false
   },
   \"export\": {
     \"enabled\": true
@@ -138,7 +139,7 @@ var chart = AmCharts.makeChart( \"chartdiv2\", {
 /*     "gridAlpha": 0.2,*/
 /*     "dashLength": 0*/
 /*   } ],*/
-/*   "gridAboveGraphs": true,*/
+/*   "gridAboveGraphs": false,*/
 /*   "startDuration": 1,*/
 /*   "graphs": [ {*/
 /*     "balloonText": "[[category]]: <b>[[value]]</b>",*/
@@ -158,7 +159,8 @@ var chart = AmCharts.makeChart( \"chartdiv2\", {
 /*     "gridPosition": "start",*/
 /*     "gridAlpha": 0,*/
 /*     "tickPosition": "start",*/
-/*     "tickLength": 20*/
+/*     "tickLength": 20,*/
+/*   "labelsEnabled": false*/
 /*   },*/
 /*   "export": {*/
 /*     "enabled": true*/

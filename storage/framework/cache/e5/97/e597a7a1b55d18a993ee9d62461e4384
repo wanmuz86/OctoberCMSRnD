@@ -1,16 +1,5 @@
-1465356891s:646:"a:6:{s:5:"mtime";i:1465356288;s:7:"content";s:237:"title = "index.htm"
+1465380615s:359:"a:6:{s:5:"mtime";i:1465375391;s:7:"content";s:89:"title = "index.htm"
 url = "/statistics/"
+layout = "statistics/index"
 is_hidden = 0
-==
-
-{% partial "layout" %}
-<link rel="stylesheet" href="{{ ['assets/css/style.css',
-'assets/css/font-awesome.css'
-]|theme }}">
-{% partial "header" %}
-{% partial "footer" %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:9:"index.htm";s:3:"url";s:12:"/statistics/";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:173:"{% partial "layout" %}
-<link rel="stylesheet" href="{{ ['assets/css/style.css',
-'assets/css/font-awesome.css'
-]|theme }}">
-{% partial "header" %}
-{% partial "footer" %}";}";
+==";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:9:"index.htm";s:3:"url";s:12:"/statistics/";s:6:"layout";s:16:"statistics/index";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:0:"";}";

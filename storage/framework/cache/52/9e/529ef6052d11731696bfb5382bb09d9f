@@ -1,0 +1,14 @@
+1465379634s:570:"a:6:{s:5:"mtime";i:1465375277;s:7:"content";s:210:"==
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+{% partial "header" %}
+{% partial "statistics/list" %}
+{% partial "footer" %}";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:206:"{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
+{% partial "header" %}
+{% partial "statistics/list" %}
+{% partial "footer" %}";}";

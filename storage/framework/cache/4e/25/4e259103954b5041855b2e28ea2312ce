@@ -1,4 +1,4 @@
-1465357386s:3823:"a:6:{s:5:"mtime";i:1465355093;s:7:"content";s:1831:"[viewBag]
+1465380616s:3779:"a:6:{s:5:"mtime";i:1465379302;s:7:"content";s:1809:"[viewBag]
 ==
 <script src="{{ ['assets/amcharts/amcharts.js',
 'assets/amcharts/serial.js',
@@ -13,25 +13,25 @@
 var chart = AmCharts.makeChart( "chartdiv_top", {
   "type": "serial",
   "theme": "light",
-  "fontSize":8,
   "dataProvider": [ {
-    "service": "MyEG/ Replacement Identity Card",
+    "country": "MyEG/ Replacement Identity Card",
     "visits": 2100,
+    "fontsize": 4,
     "color":"#206fa7"
   }, {
-    "service": "Semakan Rayuan Asrama Penuh",
-    "visits": 2000,
-	  "color":"#206fa7"},
+    "country": "Semakan Rayuan Asrama Penuh",
+    "visits": 2000
+    ,"color":"#206fa7"},
  {
-    "service": "eKahwin",
+    "country": "eKahwin",
     "visits": 1800,
     "color":"#206fa7"
   }, {
-    "service": "Semakan Saman",
+    "country": "Semakan Saman",
     "visits": 1500,
     "color":"#206fa7"
   }, {
-    "service": "e-Pengeluaran/ i-Akaun",
+    "country": "e-Pengeluaran/ i-Akaun",
     "visits": 1200,
     "color":"#206fa7"
     
@@ -41,7 +41,7 @@ var chart = AmCharts.makeChart( "chartdiv_top", {
     "gridAlpha": 0.2,
     "dashLength": 0
   } ],
-  "gridAboveGraphs": true,
+  "gridAboveGraphs": false,
   "startDuration": 1,
   "graphs": [ {
     "balloonText": "[[category]]: <b>[[value]]</b>",
@@ -57,22 +57,20 @@ var chart = AmCharts.makeChart( "chartdiv_top", {
     "cursorAlpha": 0,
     "zoomable": false
   },
-  "categoryField": "service",
+  "categoryField": "country",
   "categoryAxis": {
     "gridPosition": "start",
     "gridAlpha": 0,
     "tickPosition": "start",
-    "tickLength": 20
+    "tickLength": 20,
+  "labelsEnabled": false
   },
   "export": {
     "enabled": true
-  },
-  "responsive": {
-        "enabled": true
-      }
+  }
 
 } );
-</script>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:1816:"<script src="{{ ['assets/amcharts/amcharts.js',
+</script>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:1794:"<script src="{{ ['assets/amcharts/amcharts.js',
 'assets/amcharts/serial.js',
 'assets/amcharts/themes/light.js',
 'assets/amcharts/plugins/responsive/responsive.min.js'
@@ -85,25 +83,25 @@ var chart = AmCharts.makeChart( "chartdiv_top", {
 var chart = AmCharts.makeChart( "chartdiv_top", {
   "type": "serial",
   "theme": "light",
-  "fontSize":8,
   "dataProvider": [ {
-    "service": "MyEG/ Replacement Identity Card",
+    "country": "MyEG/ Replacement Identity Card",
     "visits": 2100,
+    "fontsize": 4,
     "color":"#206fa7"
   }, {
-    "service": "Semakan Rayuan Asrama Penuh",
-    "visits": 2000,
-	  "color":"#206fa7"},
+    "country": "Semakan Rayuan Asrama Penuh",
+    "visits": 2000
+    ,"color":"#206fa7"},
  {
-    "service": "eKahwin",
+    "country": "eKahwin",
     "visits": 1800,
     "color":"#206fa7"
   }, {
-    "service": "Semakan Saman",
+    "country": "Semakan Saman",
     "visits": 1500,
     "color":"#206fa7"
   }, {
-    "service": "e-Pengeluaran/ i-Akaun",
+    "country": "e-Pengeluaran/ i-Akaun",
     "visits": 1200,
     "color":"#206fa7"
     
@@ -113,7 +111,7 @@ var chart = AmCharts.makeChart( "chartdiv_top", {
     "gridAlpha": 0.2,
     "dashLength": 0
   } ],
-  "gridAboveGraphs": true,
+  "gridAboveGraphs": false,
   "startDuration": 1,
   "graphs": [ {
     "balloonText": "[[category]]: <b>[[value]]</b>",
@@ -129,19 +127,17 @@ var chart = AmCharts.makeChart( "chartdiv_top", {
     "cursorAlpha": 0,
     "zoomable": false
   },
-  "categoryField": "service",
+  "categoryField": "country",
   "categoryAxis": {
     "gridPosition": "start",
     "gridAlpha": 0,
     "tickPosition": "start",
-    "tickLength": 20
+    "tickLength": 20,
+  "labelsEnabled": false
   },
   "export": {
     "enabled": true
-  },
-  "responsive": {
-        "enabled": true
-      }
+  }
 
 } );
 </script>";}";

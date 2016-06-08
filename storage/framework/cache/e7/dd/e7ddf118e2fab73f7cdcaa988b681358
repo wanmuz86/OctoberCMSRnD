@@ -1,0 +1,5 @@
+1465380615s:439:"a:6:{s:5:"mtime";i:1465375428;s:7:"content";s:128:"title = "statistics/percentageresult"
+url = "/statistics/statresult"
+layout = "statistics/percentageresult"
+is_hidden = 0
+==";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:27:"statistics/percentageresult";s:3:"url";s:22:"/statistics/statresult";s:6:"layout";s:27:"statistics/percentageresult";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:0:"";}";
