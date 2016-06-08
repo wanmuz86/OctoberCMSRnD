@@ -1,59 +1,120 @@
 # ===================================
 #  Form Field Definitions
 # ===================================
-
 fields:
-    question:
-        label: Question
-        span: left fullwidth
-        size: big
-        required: true
-        type: text
-
     type_id:
-        label: Type
+        label: Type/Jenis
         type: dropdown
-
+        
     survey_id:
-        label: Survey
+        label: Survey/Kaji Selidik
         type: dropdown
+        tab: English
+        
+tabs:
+    fields:
+        question:
+            label: Question
+            span: left fullwidth
+            size: big
+            required: true
+            type: text
+            tab: English
+        
+        answer_1:
+            span: auto
+            label: Answer_1
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1][2]
+            tab: English
+       
+        answer_2:
+            span: auto
+            label: Answer_2 
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1][2]
+            tab: English
 
-    answer_1:
-        span: auto
-        label: Answer 1
-        trigger:
-            action: show
-            field: type_id
-            condition: value[1][2]
+        answer_3:
+            span: auto
+            label: Answer_3
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1] 
+            tab: English
 
-    answer_2:
-        span: auto
-        label: Answer 2
-        trigger:
-            action: show
-            field: type_id
-            condition: value[1][2]
+        answer_4:
+            span: auto
+            label: Answer_4
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1]
+            tab: English   
 
-    answer_3:
-        span: auto
-        label: Answer 3
-        trigger:
-            action: show
-            field: type_id
-            condition: value[1]
+        answer_5:
+            span: auto
+            label: Answer_5
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1]
+            tab: English
+            
+        question_bm:
+            label: Soalan
+            span: left fullwidth
+            size: big
+            required: true
+            type: text
+            tab: Malay
+            
+        answer_bm_1:
+            span: auto
+            label: Jawapan_1
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1][2]
+            tab: Malay
 
-    answer_4:
-        span: auto
-        label: Answer 4
-        trigger:
-            action: show
-            field: type_id
-            condition: value[1]
+        answer_bm_2:
+            span: auto
+            label: Jawapan_2
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1][2] 
+            tab: Malay
 
-    answer_5:
-        span: auto
-        label: Answer 5
-        trigger:
-            action: show
-            field: type_id
-            condition: value[1]
+        answer_bm_3:
+            span: auto
+            label: Jawapan_3
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1]  
+            tab: Malay
+
+        answer_bm_4:
+            span: auto
+            label: Jawapan_4
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1]   
+            tab: Malay   
+
+        answer_bm_5:
+            span: auto
+            label: Jawapan_5
+            trigger:
+                action: show
+                field: type_id
+                condition: value[1]
+            tab: Malay
