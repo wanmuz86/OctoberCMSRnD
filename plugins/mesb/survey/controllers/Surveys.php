@@ -16,11 +16,14 @@ class Surveys extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
+
+    public $requiredPermissions = ['survey.surveys_access'];
+
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Mesb.Survey', 'survey', 'surveys');
+        BackendMenu::setContext('Mesb.Survey', 'surveyplugin', 'surveys');
     }
 
   

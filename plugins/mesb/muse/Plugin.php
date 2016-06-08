@@ -1,31 +1,38 @@
-<?php namespace mesb\Muse;
+<?php
+namespace Mesb\Muse;
 
 use System\Classes\PluginBase;
 use Backend\Models\User;
 use Backend;
+
 class Plugin extends PluginBase
 {
+    public function pluginDetails()
+    {
+        return [
+            'name' => 'Muse',
+            'description' => 'Muse plugin for Agencies and Services',
+            'author' => 'Mesb',
+            'icon' => 'icon-leaf'
+        ];
+    }
+
     public function registerComponents()
     {
+      
     }
 
     public function registerSettings()
-    {
-    }
+    {}
 
     public function registerPermissions()
     {
         return [
-            'mesb.muse.manage_agencies' => [
-                'label' => 'Manage Agencies',
-                'tab' => 'MDEC Agency'
-            ],
-            'mesb.muse.manage_services' => [
-                'label' => 'Manage Services',
-                'tab' => 'MDEC Agency'
-            ]
+            'muse.agencies_access'  => ['label' => 'Agencies Page'],
+            'muse.services_access' => ['label' => 'Services Page']
         ];
     }
+
     public function boot()
     {
         // ...
@@ -47,25 +54,25 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'agency' => [
-                'label'       => 'Agency',
+            'museplugin' => [
+                'label'       => 'Muse',
                 'url'         => Backend::url('mesb/muse/agencies'),
-                'icon'        => 'icon-pencil',
-                'permissions' => ['mesb.muse.*'],
+                'icon'        => 'icon-leaf',
+                'permissions' => ['muse.*'],
                 'order'       => 500,
 
                 'sideMenu' => [
-                    'new_agency' => [
-                        'label'       => 'New Agency',
-                        'icon'        => 'icon-plus',
+                    'agencies' => [
+                        'label'       => 'Agency',
+                        'icon'        => 'icon-star',
                         'url'         => Backend::url('mesb/muse/agencies/create'),
-                        'permissions' => ['mesb.muse.manage_agencies']
+                        'permissions' => ['muse.agencies_access']
                     ],
                     'services' => [
                         'label'       => 'Services',
-                        'icon'        => 'icon-copy',
+                        'icon'        => 'icon-pencil',
                         'url'         => Backend::url('mesb/muse/services'),
-                        'permissions' => ['mesb.muse.manage_services']
+                        'permissions' => ['muse.services_access']
                     ]
                 ]
             ]
