@@ -31,7 +31,7 @@ class __TwigTemplate_44d9969392d6cd2f2c54bfad5b8a8fc82ac2a437f62cc05ee454bdac742
         unset($context['__cms_partial_params']);
         // line 6
         echo "<link rel=\"stylesheet\" href=\"";
-        echo $this->env->getExtension('CMS')->themeFilter(array(0 => "assets/css/style.css", 1 => "assets/css/font-awesome.css"));
+        echo $this->env->getExtension('CMS')->themeFilter(array(0 => "assets/css/style.css", 1 => "assets/css/poll.css"));
         // line 8
         echo "\">
 ";
@@ -101,7 +101,7 @@ class __TwigTemplate_44d9969392d6cd2f2c54bfad5b8a8fc82ac2a437f62cc05ee454bdac742
 /* ]|theme }}">*/
 /* {% partial "layout" %}*/
 /* <link rel="stylesheet" href="{{ ['assets/css/style.css',*/
-/* 'assets/css/font-awesome.css'*/
+/* 'assets/css/poll.css'*/
 /* ]|theme }}">*/
 /* {% partial "header" %}*/
 /* {% page %}*/

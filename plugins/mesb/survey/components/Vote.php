@@ -45,22 +45,20 @@ class Vote extends ComponentBase
     public function defineProperties()
     {
         return [
-            'poll_id' => [
+            'poll' => [
                 'title'       => 'Survey ID',
                 'description' => 'Enter Survey ID',
-                'default'     => '{{ :poll_id }}',
-                'type'        => 'string'
+                'type'        => 'dropdown'
             ],
-            'service_id' => [
+            'service' => [
                 'title'       => 'Service ID',
                 'description' => 'Enter Service ID',
-                'default'     => '{{ :service_id }}',
-                'type'        => 'string'
+                'type'        => 'dropdown'
             ],
         ];
     }
 
-    public function getSurveyOptions()
+    public function getPollOptions()
     {
         return array_add(Surveys::all()->lists('name', 'id'), '', '-none-');
     }
@@ -81,8 +79,8 @@ class Vote extends ComponentBase
     }
     public function onRender()
     {
-        $this->currentService = $this->page['currentService'] = Service::getCurrentService($this->property('service_id'));
-        $this->currentSurvey = $this->page['currentSurvey'] = Surveys::getCurrentSurvey(($this->property('service_id') == 0 ? Surveys::getLatestSurveyId() : $this->property('service_id')));
+        $this->currentService = $this->page['currentService'] = Service::getCurrentService($this->property('service'));
+        $this->currentSurvey = $this->page['currentSurvey'] = Surveys::getCurrentSurvey(($this->property('service') == 0 ? Surveys::getLatestSurveyId() : $this->property('service')));
         $this->latestPoll = $this->page['latestPoll'] = Question::getLatestPoll( $this->currentSurvey->id);
         $this->latestPollAnswers = $this->page['latestPollAnswers'] = Question::getLatestPollAnswers( $this->currentSurvey->id);
     }

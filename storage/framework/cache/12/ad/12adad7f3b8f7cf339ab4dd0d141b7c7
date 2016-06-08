@@ -1,7 +1,7 @@
-1465380871s:11354:"a:6:{s:5:"mtime";i:1465380268;s:7:"content";s:5601:"==
+1465383387s:11348:"a:6:{s:5:"mtime";i:1465382784;s:7:"content";s:5598:"==
 {% partial "layout" %}
-<link rel="stylesheet" href="{{ ['assets/css/style.css'
-]|theme }}">
+<link href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css']|theme }}" rel="stylesheet">
 <!-- admin menu bar -->
 {% partial "header" %}
 
@@ -67,7 +67,7 @@
 												<div class="col-md-12 col-fix">
 													<div class="widget-header widget-header-fix" style="background-color: #93278f;">
 														<div class="col-md-4 col-fix">
-															<div class="fa fa-long-arrow-down pull-left"><i class="icon-camera-retro"></i></div>
+															<div class="fa fa-long-arrow-down pull-left"></div>
 														</div>                        
 
 														<div class="col-md-8 col-fix">
@@ -172,9 +172,9 @@
 </div></div>
 {% partial "footer" %}
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:5597:"{% partial "layout" %}
-<link rel="stylesheet" href="{{ ['assets/css/style.css'
-]|theme }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:5594:"{% partial "layout" %}
+<link href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css']|theme }}" rel="stylesheet">
 <!-- admin menu bar -->
 {% partial "header" %}
 
@@ -240,7 +240,7 @@
 												<div class="col-md-12 col-fix">
 													<div class="widget-header widget-header-fix" style="background-color: #93278f;">
 														<div class="col-md-4 col-fix">
-															<div class="fa fa-long-arrow-down pull-left"><i class="icon-camera-retro"></i></div>
+															<div class="fa fa-long-arrow-down pull-left"></div>
 														</div>                        
 
 														<div class="col-md-8 col-fix">

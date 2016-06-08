@@ -20,10 +20,10 @@ class __TwigTemplate_a2aa0bef8581963cc2cc274e942716c3eee9ab5f7126113d0b1f9a16d23
         echo $this->env->getExtension('CMS')->partialFunction("layout"        , $context['__cms_partial_params']        );
         unset($context['__cms_partial_params']);
         // line 2
-        echo "<link rel=\"stylesheet\" href=\"";
-        echo $this->env->getExtension('CMS')->themeFilter(array(0 => "assets/css/style.css"));
+        echo "<link href=\"";
+        echo $this->env->getExtension('CMS')->themeFilter(array(0 => "assets/css/style.css", 1 => "assets/css/font-awesome.css"));
         // line 3
-        echo "\">
+        echo "\" rel=\"stylesheet\">
 <!-- admin menu bar -->
 ";
         // line 5
@@ -99,7 +99,7 @@ class __TwigTemplate_a2aa0bef8581963cc2cc274e942716c3eee9ab5f7126113d0b1f9a16d23
 \t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-12 col-fix\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"widget-header widget-header-fix\" style=\"background-color: #93278f;\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-4 col-fix\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"fa fa-long-arrow-down pull-left\"><i class=\"icon-camera-retro\"></i></div>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"fa fa-long-arrow-down pull-left\"></div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>                        
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-8 col-fix\">
@@ -243,8 +243,8 @@ class __TwigTemplate_a2aa0bef8581963cc2cc274e942716c3eee9ab5f7126113d0b1f9a16d23
     }
 }
 /* {% partial "layout" %}*/
-/* <link rel="stylesheet" href="{{ ['assets/css/style.css'*/
-/* ]|theme }}">*/
+/* <link href="{{ ['assets/css/style.css',*/
+/* 'assets/css/font-awesome.css']|theme }}" rel="stylesheet">*/
 /* <!-- admin menu bar -->*/
 /* {% partial "header" %}*/
 /* */
@@ -310,7 +310,7 @@ class __TwigTemplate_a2aa0bef8581963cc2cc274e942716c3eee9ab5f7126113d0b1f9a16d23
 /* 												<div class="col-md-12 col-fix">*/
 /* 													<div class="widget-header widget-header-fix" style="background-color: #93278f;">*/
 /* 														<div class="col-md-4 col-fix">*/
-/* 															<div class="fa fa-long-arrow-down pull-left"><i class="icon-camera-retro"></i></div>*/
+/* 															<div class="fa fa-long-arrow-down pull-left"></div>*/
 /* 														</div>                        */
 /* */
 /* 														<div class="col-md-8 col-fix">*/

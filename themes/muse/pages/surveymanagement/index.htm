@@ -1,10 +1,10 @@
 title = "index.htm"
-url = "/surveymanagement/:service_id/:survey_id"
+url = "/surveymanagement/"
 layout = "surveymanagement/index"
 is_hidden = 0
 
 [poll]
-poll_id = "{{ :poll_id }}"
-service_id = "{{ :service_id }}"
+poll = 1
+service = 1
 ==
 {% component 'poll' %}

@@ -119,7 +119,7 @@ class __TwigTemplate_2ec95433961ab498aaa51703f18a510799d98c038828f7a692155987d69
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-yes\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
-                echo "\" value=\"yes\" /> Ya</label></div>
+                echo "\" value=\"1\" /> Ya</label></div>
         <div class=\"checkbox\"><label for=\"";
                 // line 37
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
@@ -127,13 +127,13 @@ class __TwigTemplate_2ec95433961ab498aaa51703f18a510799d98c038828f7a692155987d69
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-no\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
-                echo "\" value=\"no\" /> Tidak</label></div>
+                echo "\" value=\"2\" /> Tidak</label></div>
         ";
             } elseif (($this->getAttribute(            // line 38
 $context["poll"], "type_id", array()) == 3)) {
                 // line 39
-                echo "
-        <div class=\"checkbox\"><label for=\"";
+                echo "         <div class=\"row\">
+        <div class=\"checkbox col-md-2\"><label for=\"";
                 // line 40
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-1\"><input id=\"";
@@ -141,9 +141,9 @@ $context["poll"], "type_id", array()) == 3)) {
                 echo "-1\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"1\" /><img src=\"";
-                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-1.png";
+                echo "/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-1.png";
                 echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
-        <div class=\"checkbox\"><label for=\"";
+        <div class=\"checkbox col-md-2\"><label for=\"";
                 // line 41
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-2\"><input id=\"";
@@ -151,9 +151,9 @@ $context["poll"], "type_id", array()) == 3)) {
                 echo "-2\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"2\" /><img src=\"";
-                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-2.png";
+                echo "/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-2.png";
                 echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
-        <div class=\"checkbox\"><label for=\"";
+        <div class=\"checkbox col-md-2\"><label for=\"";
                 // line 42
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-3\"><input id=\"";
@@ -161,9 +161,9 @@ $context["poll"], "type_id", array()) == 3)) {
                 echo "-3\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"3\" /><img src=\"";
-                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-3.png";
+                echo "/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-3.png";
                 echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
-        <div class=\"checkbox\"><label for=\"";
+        <div class=\"checkbox col-md-2\"><label for=\"";
                 // line 43
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-4\"><input id=\"";
@@ -171,9 +171,9 @@ $context["poll"], "type_id", array()) == 3)) {
                 echo "-4\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"4\" /><img src=\"";
-                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-4.png";
+                echo "/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-4.png";
                 echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
-        <div class=\"checkbox\"><label for=\"";
+        <div class=\"checkbox col-md-2\"><label for=\"";
                 // line 44
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "-5\"><input id=\"";
@@ -181,29 +181,30 @@ $context["poll"], "type_id", array()) == 3)) {
                 echo "-5\" type=\"radio\" name=\"vote_answer_";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["poll"], "id", array(), "array"), "html", null, true);
                 echo "\" value=\"5\" /><img src=\"";
-                echo "/october/plugins/mesb/survey/assets/images/smiley-rating-5.png";
+                echo "/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-5.png";
                 echo "\" alt=\"visit-image\" class=\"img-responsive visit-item\"></label></div>
+        </div>
 
         ";
             }
-            // line 47
+            // line 48
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['poll'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 49
         echo "        <button type=\"submit\" class=\"btn btn-success\">Vote</button>
     </div>
     </div>
-
+</form>
     <div class=\"confirm-container-";
-        // line 52
+        // line 53
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["survey"]) ? $context["survey"] : null), "id", array(), "array"), "html", null, true);
         echo "\">
         <!--This will contain the poll result -->
     </div>
-</form>
+
 <div id=\"result\"></div>
 <br/>
 <br/>
@@ -229,7 +230,7 @@ $context["poll"], "type_id", array()) == 3)) {
 
     public function getDebugInfo()
     {
-        return array (  202 => 52,  196 => 48,  190 => 47,  178 => 44,  168 => 43,  158 => 42,  148 => 41,  138 => 40,  135 => 39,  133 => 38,  125 => 37,  116 => 36,  113 => 35,  93 => 33,  90 => 32,  85 => 31,  83 => 30,  79 => 29,  76 => 28,  72 => 27,  68 => 26,  64 => 25,  58 => 24,  52 => 23,  46 => 20,  42 => 19,  38 => 18,  19 => 1,);
+        return array (  203 => 53,  197 => 49,  191 => 48,  178 => 44,  168 => 43,  158 => 42,  148 => 41,  138 => 40,  135 => 39,  133 => 38,  125 => 37,  116 => 36,  113 => 35,  93 => 33,  90 => 32,  85 => 31,  83 => 30,  79 => 29,  76 => 28,  72 => 27,  68 => 26,  64 => 25,  58 => 24,  52 => 23,  46 => 20,  42 => 19,  38 => 18,  19 => 1,);
     }
 }
 /* <html>*/
@@ -267,26 +268,27 @@ $context["poll"], "type_id", array()) == 3)) {
 /*         <div class="checkbox"><label for="{{poll['id']}}-{{ answer }}"><input id="{{poll['id']}}-{{ answer }}" type="radio" name="vote_answer_{{poll['id']}}" value="{{ answer }}" /> {{ key }}</label></div>*/
 /*         {% endfor %}*/
 /*         {% elseif poll.type_id == 2 %}*/
-/*         <div class="checkbox"><label for="{{poll['id']}}-yes"><input id="{{poll['id']}}-yes" type="radio" name="vote_answer_{{poll['id']}}" value="yes" /> Ya</label></div>*/
-/*         <div class="checkbox"><label for="{{poll['id']}}-no"><input id="{{poll['id']}}-no" type="radio" name="vote_answer_{{poll['id']}}" value="no" /> Tidak</label></div>*/
+/*         <div class="checkbox"><label for="{{poll['id']}}-yes"><input id="{{poll['id']}}-yes" type="radio" name="vote_answer_{{poll['id']}}" value="1" /> Ya</label></div>*/
+/*         <div class="checkbox"><label for="{{poll['id']}}-no"><input id="{{poll['id']}}-no" type="radio" name="vote_answer_{{poll['id']}}" value="2" /> Tidak</label></div>*/
 /*         {% elseif poll.type_id == 3 %}*/
-/* */
-/*         <div class="checkbox"><label for="{{poll['id']}}-1"><input id="{{poll['id']}}-1" type="radio" name="vote_answer_{{poll['id']}}" value="1" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-1.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
-/*         <div class="checkbox"><label for="{{poll['id']}}-2"><input id="{{poll['id']}}-2" type="radio" name="vote_answer_{{poll['id']}}" value="2" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-2.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
-/*         <div class="checkbox"><label for="{{poll['id']}}-3"><input id="{{poll['id']}}-3" type="radio" name="vote_answer_{{poll['id']}}" value="3" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-3.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
-/*         <div class="checkbox"><label for="{{poll['id']}}-4"><input id="{{poll['id']}}-4" type="radio" name="vote_answer_{{poll['id']}}" value="4" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-4.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
-/*         <div class="checkbox"><label for="{{poll['id']}}-5"><input id="{{poll['id']}}-5" type="radio" name="vote_answer_{{poll['id']}}" value="5" /><img src="{{ '/october/plugins/mesb/survey/assets/images/smiley-rating-5.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*          <div class="row">*/
+/*         <div class="checkbox col-md-2"><label for="{{poll['id']}}-1"><input id="{{poll['id']}}-1" type="radio" name="vote_answer_{{poll['id']}}" value="1" /><img src="{{ '/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-1.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox col-md-2"><label for="{{poll['id']}}-2"><input id="{{poll['id']}}-2" type="radio" name="vote_answer_{{poll['id']}}" value="2" /><img src="{{ '/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-2.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox col-md-2"><label for="{{poll['id']}}-3"><input id="{{poll['id']}}-3" type="radio" name="vote_answer_{{poll['id']}}" value="3" /><img src="{{ '/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-3.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox col-md-2"><label for="{{poll['id']}}-4"><input id="{{poll['id']}}-4" type="radio" name="vote_answer_{{poll['id']}}" value="4" /><img src="{{ '/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-4.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         <div class="checkbox col-md-2"><label for="{{poll['id']}}-5"><input id="{{poll['id']}}-5" type="radio" name="vote_answer_{{poll['id']}}" value="5" /><img src="{{ '/OctoberCMSRnD/plugins/mesb/survey/assets/images/smiley-rating-5.png' }}" alt="visit-image" class="img-responsive visit-item"></label></div>*/
+/*         </div>*/
 /* */
 /*         {% endif %}*/
 /*     {% endfor %}*/
 /*         <button type="submit" class="btn btn-success">Vote</button>*/
 /*     </div>*/
 /*     </div>*/
-/* */
+/* </form>*/
 /*     <div class="confirm-container-{{ survey['id'] }}">*/
 /*         <!--This will contain the poll result -->*/
 /*     </div>*/
-/* </form>*/
+/* */
 /* <div id="result"></div>*/
 /* <br/>*/
 /* <br/>*/

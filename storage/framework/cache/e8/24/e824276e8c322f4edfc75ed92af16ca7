@@ -1,4 +1,4 @@
-1465380871s:15473:"a:6:{s:5:"mtime";i:1465358103;s:7:"content";s:7656:"[viewBag]
+1465389658s:14821:"a:6:{s:5:"mtime";i:1465381547;s:7:"content";s:7330:"[viewBag]
 ==
 <nav class="navbar">
 	<div class="navbar-header">
@@ -204,21 +204,14 @@
 															<li class="dropdown @yield('link_survey') link-red b-right">
 																<a href="{{ 'surveymanagement/index'|page }}">  
 																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>
-																	<span>Survey Management</span>
+																	<span>Active Survey</span>
 																</a>            
-															</li>
-
-															<li class="dropdown @yield('link_setting') link-red b-right">
-																<a href="{{ 'surveyreport/index'|page }}">           
-																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>
-																	<span>Survey Report</span>
-																</a> 
 															</li>
 
 															<li class="dropdown @yield('link_statistic') link-red b-right">         
 																<a href="{{ 'statistics/index'|page }}">  
 																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>
-																	<span>Statistics</span>
+																	<span>Survey Report</span>
 																</a>                    
 															</li>
 															
@@ -232,7 +225,7 @@
 
 											<!--end up menu-->
 
-											<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:7641:"<nav class="navbar">
+											<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:7315:"<nav class="navbar">
 	<div class="navbar-header">
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#small-screens-menus">
 			<span class="sr-only">Toggle navigation</span>
@@ -436,21 +429,14 @@
 															<li class="dropdown @yield('link_survey') link-red b-right">
 																<a href="{{ 'surveymanagement/index'|page }}">  
 																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>
-																	<span>Survey Management</span>
+																	<span>Active Survey</span>
 																</a>            
-															</li>
-
-															<li class="dropdown @yield('link_setting') link-red b-right">
-																<a href="{{ 'surveyreport/index'|page }}">           
-																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>
-																	<span>Survey Report</span>
-																</a> 
 															</li>
 
 															<li class="dropdown @yield('link_statistic') link-red b-right">         
 																<a href="{{ 'statistics/index'|page }}">  
 																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>
-																	<span>Statistics</span>
+																	<span>Survey Report</span>
 																</a>                    
 															</li>
 															

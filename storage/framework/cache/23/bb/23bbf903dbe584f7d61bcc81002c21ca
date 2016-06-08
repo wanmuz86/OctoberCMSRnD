@@ -1,0 +1,9 @@
+1465389658s:531:"a:6:{s:5:"mtime";i:1465380338;s:7:"content";s:167:"title = "poll"
+url = "/poll/:service_id/:survey_id"
+is_hidden = 0
+
+[poll]
+poll_id = "{{ :poll_id }}"
+service_id = "{{ :service_id }}"
+==
+{% component 'poll' %}";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:4:"poll";s:3:"url";s:28:"/poll/:service_id/:survey_id";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:4:"poll";a:2:{s:7:"poll_id";s:14:"{{ :poll_id }}";s:10:"service_id";s:17:"{{ :service_id }}";}}}s:4:"code";N;s:6:"markup";s:22:"{% component 'poll' %}";}";

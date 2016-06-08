@@ -238,33 +238,20 @@ class __TwigTemplate_cd73db7f5442f9e935b767008b70a1f43d7b73639cfa785d0b42909806b
         // line 204
         echo $this->env->getExtension('CMS')->themeFilter("assets/images/menu/dashboard.png");
         echo "\" /></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Survey Management</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Active Survey</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>            
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
-
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"dropdown @yield('link_setting') link-red b-right\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 210
-        echo $this->env->getExtension('CMS')->pageFilter("surveyreport/index");
-        echo "\">           
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i><img src=\"";
-        // line 211
-        echo $this->env->getExtension('CMS')->themeFilter("assets/images/menu/setting.png");
-        echo "\" /></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Survey Report</span>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a> 
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"dropdown @yield('link_statistic') link-red b-right\">         
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 217
+        // line 210
         echo $this->env->getExtension('CMS')->pageFilter("statistics/index");
         echo "\">  
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i><img src=\"";
-        // line 218
+        // line 211
         echo $this->env->getExtension('CMS')->themeFilter("assets/images/menu/statistic.png");
         echo "\" /></i>
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Statistics</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span>Survey Report</span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</a>                    
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
@@ -293,7 +280,7 @@ class __TwigTemplate_cd73db7f5442f9e935b767008b70a1f43d7b73639cfa785d0b42909806b
 
     public function getDebugInfo()
     {
-        return array (  265 => 218,  261 => 217,  252 => 211,  248 => 210,  239 => 204,  235 => 203,  226 => 197,  222 => 196,  37 => 14,  33 => 13,  19 => 1,);
+        return array (  252 => 211,  248 => 210,  239 => 204,  235 => 203,  226 => 197,  222 => 196,  37 => 14,  33 => 13,  19 => 1,);
     }
 }
 /* <nav class="navbar">*/
@@ -500,21 +487,14 @@ class __TwigTemplate_cd73db7f5442f9e935b767008b70a1f43d7b73639cfa785d0b42909806b
 /* 															<li class="dropdown @yield('link_survey') link-red b-right">*/
 /* 																<a href="{{ 'surveymanagement/index'|page }}">  */
 /* 																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>*/
-/* 																	<span>Survey Management</span>*/
+/* 																	<span>Active Survey</span>*/
 /* 																</a>            */
-/* 															</li>*/
-/* */
-/* 															<li class="dropdown @yield('link_setting') link-red b-right">*/
-/* 																<a href="{{ 'surveyreport/index'|page }}">           */
-/* 																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>*/
-/* 																	<span>Survey Report</span>*/
-/* 																</a> */
 /* 															</li>*/
 /* */
 /* 															<li class="dropdown @yield('link_statistic') link-red b-right">         */
 /* 																<a href="{{ 'statistics/index'|page }}">  */
 /* 																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>*/
-/* 																	<span>Statistics</span>*/
+/* 																	<span>Survey Report</span>*/
 /* 																</a>                    */
 /* 															</li>*/
 /* 															*/
