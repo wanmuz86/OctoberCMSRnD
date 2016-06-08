@@ -102,6 +102,7 @@ class Vote extends ComponentBase
         $this->page['vote'] = new Polls;
         $this->latestPoll = $this->page['latestPoll'] = Question::getLatestPoll($poll['survey_id']);
         $this->latestPollAnswers = $this->page['latestPollAnswers'] = Question::getLatestPollAnswers($poll['survey_id']);
+		$this->page['service_id'] = post('service');
 	}
     
 }
