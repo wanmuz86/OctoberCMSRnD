@@ -1,0 +1,467 @@
+1465355402s:15473:"a:6:{s:5:"mtime";i:1465354107;s:7:"content";s:7656:"[viewBag]
+==
+<nav class="navbar">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#small-screens-menus">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+
+		<a class="navbar-brand" rel="home" href="/">
+			<img style="max-width:100px; margin-top: -7px;"
+			src="{{ 'assets/tmp/assets/1a96f8c4/logo.png'|theme }}">
+			<!-- <img alt="logo" id="profile-img" class="profile-img-card img-responsive center-block" src="{{asset('tmp/assets/1a96f8c4/logo.png')}}"  /> -->    </a>
+			
+		</div>
+
+	</div>
+
+	<!-- Only on xs screens -->
+	<div class="collapse navbar-collapse pull-left hidden-sm  hidden-md hidden-lg" id="small-screens-menus">
+		<ul class="nav navbar-nav hidden-sm  hidden-md hidden-lg">
+
+
+			<li><br/><br/></li>
+			<!-- active surveys -->
+			<li>
+				<a href="/index.php/admin/survey/sa/listsurveys/active/Y">
+					<?php echo $data['total_active_surveys']; ?> active surveys
+				</a>
+			</li>
+			<li>
+				<a href="/admin/profiles">
+					Create/Edit User Groups</a>
+				</li>
+				
+				<!-- List surveys -->
+				<li>
+					<a href="/survey/listSurvey">
+						List surveys                </a>
+					</li>
+
+					<!-- Logout -->
+					<li>
+						<a href="/logout">
+							Logout                </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="collapse navbar-collapse js-navbar-collapse pull-right">
+					<ul class="nav navbar-nav navbar-right">   
+
+						<!-- Configuration -->
+						<li class="dropdown mega-dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="icon-settings" ></span>
+								Settings<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu mega-dropdown-menu" id="mainmenu-dropdown">
+
+								<!-- System overview -->
+								<li class="col-sm-3">
+
+									<!-- System overview -->
+									<div class="box" id="systemoverview">
+										<div class="box-icon">
+											<span class="glyphicon glyphicon-info-sign" id="info-header"></span>
+										</div>
+										<div class="info">
+											<h5 class="text-center">System overview</h5>
+											<dl class="dl-horizontal">
+												<dt class="text-info">Users</dt>
+												<dd><?php echo $data['total_Users']; ?></dd>
+												<dt class="text-info">Surveys</dt>
+												<dd><?php echo $data['total_surveys']; ?></dd>
+												<dt class="text-info">Active surveys</dt>
+												<dd><?php echo $data['total_active_surveys']; ?></dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+
+								<!-- Expression Manager -->
+								<li class="col-sm-3">
+								</li>
+
+								<!-- Advanced -->
+								<li class="col-sm-2">
+								</li>
+
+
+								<!-- Users -->
+								<li class="col-sm-2">
+
+									<!-- Users -->
+									<ul>
+
+										<!-- Users -->
+										<li class="dropdown-header">
+
+											<span class="icon-user" ></span>
+											Users                </li>
+
+											<!-- Manage survey administrators -->
+											<li class="dropdown-item">
+												<a href="/admin/profiles">
+													Manage survey administrators                    </a>
+												</li>
+
+												<!-- Create/edit user groups -->
+												<li class="dropdown-item">
+													<a href="/index.php/admin/usergroups/sa/index">
+														Create/edit user groups                    </a>
+													</li>
+
+													<!-- Central participant database/panel -->
+													<li class="dropdown-item">
+														<a href="/index.php/admin/participants/sa/displayParticipants">
+															Central participant database/panel                    </a>
+														</li>
+													</ul>
+												</li>
+
+
+
+												<!-- Settings -->
+												<li class="col-sm-2">
+													<ul>
+
+														<!-- Settings -->
+														<li class="dropdown-header">
+															<span class="icon-global" ></span>
+															Settings                </li>
+
+															<!-- Global settings -->
+															<li class="dropdown-item">
+																<a href="/index.php/admin/globalsettings">
+																	Global settings                    </a>
+																</li>
+
+																<!-- Edit label sets -->
+																<li class="dropdown-item">
+																	<a href="/index.php/admin/labels/sa/view">
+																		Edit label sets                    </a>
+																	</li>
+
+																	<!-- Template Editor -->
+																	<li class="dropdown-item">
+																		<a href="/index.php/admin/templates/sa/view">
+																			Template editor                    </a>
+																		</li>
+																	</ul>
+																</li>
+
+
+															</ul>
+														</li>
+
+														<!-- user menu -->
+														<li class="dropdown">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >Agency <span class="caret"></span></a>
+															<ul class="dropdown-menu" role="menu">
+
+																<!-- Edit your personal preferences -->
+																<li>
+																	<a href="/index.php/admin/user/sa/personalsettings">Edit your personal preferences</a>
+																</li>
+
+																<li class="divider"></li>
+
+																<!-- Logout -->
+																<li>
+																	<li><a href="/logout">Logout</a></li>
+																</li>
+															</ul>
+														</li>
+
+														
+													</ul>
+												</div><!-- /.nav-collapse -->
+												
+
+											</nav>
+											<!--up menu-->
+											<div class="subnavbar">
+
+												<div class="subnavbar-inner">
+													
+													<div class="container" align="center">
+
+														<ul class="mainnav">
+															
+
+															<li class="dropdown @yield('link_home') link-red b-right"> 
+																<a href="{{ 'admin/dashboard'|page }}">       
+																	<i><img src="{{ 'assets/images/menu/survey.png'|theme }}" /></i>
+																	<span>Dashboard</span>
+																</a>                    
+															</li>
+
+															<li class="dropdown @yield('link_survey') link-red b-right">
+																<a href="{{ 'surveymanagement/index'|page }}">  
+																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>
+																	<span>Survey Management</span>
+																</a>            
+															</li>
+
+															<li class="dropdown @yield('link_setting') link-red b-right">
+																<a href="{{ 'surveyreport/index'|page }}">           
+																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>
+																	<span>Survey Report</span>
+																</a> 
+															</li>
+
+															<li class="dropdown @yield('link_statistic') link-red b-right">         
+																<a href="{{ 'statistics/index'|page }}">  
+																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>
+																	<span>Statistics</span>
+																</a>                    
+															</li>
+															
+														</ul>
+
+													</div><!-- /container --> 
+
+												</div><!-- /subnavbar-inner --> 
+
+											</div><!-- /subnavbar -->
+
+											<!--end up menu-->
+
+											<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:1:{s:7:"viewBag";a:0:{}}}s:4:"code";N;s:6:"markup";s:7641:"<nav class="navbar">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#small-screens-menus">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+
+
+		<a class="navbar-brand" rel="home" href="/">
+			<img style="max-width:100px; margin-top: -7px;"
+			src="{{ 'assets/tmp/assets/1a96f8c4/logo.png'|theme }}">
+			<!-- <img alt="logo" id="profile-img" class="profile-img-card img-responsive center-block" src="{{asset('tmp/assets/1a96f8c4/logo.png')}}"  /> -->    </a>
+			
+		</div>
+
+	</div>
+
+	<!-- Only on xs screens -->
+	<div class="collapse navbar-collapse pull-left hidden-sm  hidden-md hidden-lg" id="small-screens-menus">
+		<ul class="nav navbar-nav hidden-sm  hidden-md hidden-lg">
+
+
+			<li><br/><br/></li>
+			<!-- active surveys -->
+			<li>
+				<a href="/index.php/admin/survey/sa/listsurveys/active/Y">
+					<?php echo $data['total_active_surveys']; ?> active surveys
+				</a>
+			</li>
+			<li>
+				<a href="/admin/profiles">
+					Create/Edit User Groups</a>
+				</li>
+				
+				<!-- List surveys -->
+				<li>
+					<a href="/survey/listSurvey">
+						List surveys                </a>
+					</li>
+
+					<!-- Logout -->
+					<li>
+						<a href="/logout">
+							Logout                </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="collapse navbar-collapse js-navbar-collapse pull-right">
+					<ul class="nav navbar-nav navbar-right">   
+
+						<!-- Configuration -->
+						<li class="dropdown mega-dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="icon-settings" ></span>
+								Settings<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu mega-dropdown-menu" id="mainmenu-dropdown">
+
+								<!-- System overview -->
+								<li class="col-sm-3">
+
+									<!-- System overview -->
+									<div class="box" id="systemoverview">
+										<div class="box-icon">
+											<span class="glyphicon glyphicon-info-sign" id="info-header"></span>
+										</div>
+										<div class="info">
+											<h5 class="text-center">System overview</h5>
+											<dl class="dl-horizontal">
+												<dt class="text-info">Users</dt>
+												<dd><?php echo $data['total_Users']; ?></dd>
+												<dt class="text-info">Surveys</dt>
+												<dd><?php echo $data['total_surveys']; ?></dd>
+												<dt class="text-info">Active surveys</dt>
+												<dd><?php echo $data['total_active_surveys']; ?></dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+
+								<!-- Expression Manager -->
+								<li class="col-sm-3">
+								</li>
+
+								<!-- Advanced -->
+								<li class="col-sm-2">
+								</li>
+
+
+								<!-- Users -->
+								<li class="col-sm-2">
+
+									<!-- Users -->
+									<ul>
+
+										<!-- Users -->
+										<li class="dropdown-header">
+
+											<span class="icon-user" ></span>
+											Users                </li>
+
+											<!-- Manage survey administrators -->
+											<li class="dropdown-item">
+												<a href="/admin/profiles">
+													Manage survey administrators                    </a>
+												</li>
+
+												<!-- Create/edit user groups -->
+												<li class="dropdown-item">
+													<a href="/index.php/admin/usergroups/sa/index">
+														Create/edit user groups                    </a>
+													</li>
+
+													<!-- Central participant database/panel -->
+													<li class="dropdown-item">
+														<a href="/index.php/admin/participants/sa/displayParticipants">
+															Central participant database/panel                    </a>
+														</li>
+													</ul>
+												</li>
+
+
+
+												<!-- Settings -->
+												<li class="col-sm-2">
+													<ul>
+
+														<!-- Settings -->
+														<li class="dropdown-header">
+															<span class="icon-global" ></span>
+															Settings                </li>
+
+															<!-- Global settings -->
+															<li class="dropdown-item">
+																<a href="/index.php/admin/globalsettings">
+																	Global settings                    </a>
+																</li>
+
+																<!-- Edit label sets -->
+																<li class="dropdown-item">
+																	<a href="/index.php/admin/labels/sa/view">
+																		Edit label sets                    </a>
+																	</li>
+
+																	<!-- Template Editor -->
+																	<li class="dropdown-item">
+																		<a href="/index.php/admin/templates/sa/view">
+																			Template editor                    </a>
+																		</li>
+																	</ul>
+																</li>
+
+
+															</ul>
+														</li>
+
+														<!-- user menu -->
+														<li class="dropdown">
+															<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" >Agency <span class="caret"></span></a>
+															<ul class="dropdown-menu" role="menu">
+
+																<!-- Edit your personal preferences -->
+																<li>
+																	<a href="/index.php/admin/user/sa/personalsettings">Edit your personal preferences</a>
+																</li>
+
+																<li class="divider"></li>
+
+																<!-- Logout -->
+																<li>
+																	<li><a href="/logout">Logout</a></li>
+																</li>
+															</ul>
+														</li>
+
+														
+													</ul>
+												</div><!-- /.nav-collapse -->
+												
+
+											</nav>
+											<!--up menu-->
+											<div class="subnavbar">
+
+												<div class="subnavbar-inner">
+													
+													<div class="container" align="center">
+
+														<ul class="mainnav">
+															
+
+															<li class="dropdown @yield('link_home') link-red b-right"> 
+																<a href="{{ 'admin/dashboard'|page }}">       
+																	<i><img src="{{ 'assets/images/menu/survey.png'|theme }}" /></i>
+																	<span>Dashboard</span>
+																</a>                    
+															</li>
+
+															<li class="dropdown @yield('link_survey') link-red b-right">
+																<a href="{{ 'surveymanagement/index'|page }}">  
+																	<i><img src="{{ 'assets/images/menu/dashboard.png'|theme }}" /></i>
+																	<span>Survey Management</span>
+																</a>            
+															</li>
+
+															<li class="dropdown @yield('link_setting') link-red b-right">
+																<a href="{{ 'surveyreport/index'|page }}">           
+																	<i><img src="{{ 'assets/images/menu/setting.png'|theme }}" /></i>
+																	<span>Survey Report</span>
+																</a> 
+															</li>
+
+															<li class="dropdown @yield('link_statistic') link-red b-right">         
+																<a href="{{ 'statistics/index'|page }}">  
+																	<i><img src="{{ 'assets/images/menu/statistic.png'|theme }}" /></i>
+																	<span>Statistics</span>
+																</a>                    
+															</li>
+															
+														</ul>
+
+													</div><!-- /container --> 
+
+												</div><!-- /subnavbar-inner --> 
+
+											</div><!-- /subnavbar -->
+
+											<!--end up menu-->
+
+											<div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>";}";
