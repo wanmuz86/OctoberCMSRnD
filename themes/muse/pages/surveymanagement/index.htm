@@ -10,6 +10,10 @@ service_id = "{{ :service_id }}"
 <link rel="stylesheet" href="{{ ['assets/css/style.css',
 'assets/css/font-awesome.css'
 ]|theme }}">
+{% partial "layout" %}
+<link rel="stylesheet" href="{{ ['assets/css/style.css',
+'assets/css/font-awesome.css'
+]|theme }}">
 {% partial "header" %}
 {% component 'poll' %}
 {% partial "footer" %}

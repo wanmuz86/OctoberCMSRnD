@@ -1,4 +1,4 @@
-1465355402s:6375:"a:6:{s:5:"mtime";i:1465349131;s:7:"content";s:3101:"title = "home"
+1465356827s:6483:"a:6:{s:5:"mtime";i:1465356223;s:7:"content";s:3155:"title = "home"
 url = "/"
 is_hidden = 0
 ==
@@ -32,6 +32,7 @@ is_hidden = 0
 
 					<!-- Form -->
 					<div class="row login-content login-content-form">
+					<form action="{{ 'admin/dashboard'|page }}">   
                         <div class="col-lg-12">
                             <input type="hidden" value="Authdb" name="authMethod" id="authMethod"><span><label for="user">Username</label><input placeholder="Email" id="email" class="form-control" required="required" name="email" type="text">
                                 </span><span><label for="password">Kata laluan</label><input placeholder="Password" class="form-control" required="required" name="password" type="password" value="">
@@ -76,7 +77,7 @@ is_hidden = 0
 //jQuery('#loginlang').select2({'options':{'width':'230px'},'htmlOptions':{'id':'loginlang'},'value':'default'});
 /*]]>*/
 </script>
-";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:4:"home";s:3:"url";s:1:"/";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:3053:"{% partial "layout" %}
+";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:4:"home";s:3:"url";s:1:"/";s:9:"is_hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:3107:"{% partial "layout" %}
 
 <div id="notif-container" class="col-lg-12 content-right" style="z-index: 10100"></div>
 
@@ -106,6 +107,7 @@ is_hidden = 0
 
 					<!-- Form -->
 					<div class="row login-content login-content-form">
+					<form action="{{ 'admin/dashboard'|page }}">   
                         <div class="col-lg-12">
                             <input type="hidden" value="Authdb" name="authMethod" id="authMethod"><span><label for="user">Username</label><input placeholder="Email" id="email" class="form-control" required="required" name="email" type="text">
                                 </span><span><label for="password">Kata laluan</label><input placeholder="Password" class="form-control" required="required" name="password" type="password" value="">
