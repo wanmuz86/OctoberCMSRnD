@@ -9,7 +9,7 @@ use Backend\Classes\Controller;
 class Services extends Controller
 {
 
-    public $requiredPermissions = ['rafie.sitepointDemo.manage_teams'];
+    public $requiredPermissions = ['muse.services_access'];
     
     public $implement = [
         'Backend.Behaviors.FormController',
@@ -23,6 +23,6 @@ class Services extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Mesb.Muse', 'muse', 'services');
+        BackendMenu::setContext('Mesb.Muse', 'museplugin', 'services');
     }
 }

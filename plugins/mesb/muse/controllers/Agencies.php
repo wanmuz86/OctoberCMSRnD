@@ -12,7 +12,7 @@ class Agencies extends Controller
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController'
     ];
-
+    public $requiredPermissions = ['muse.agencies_access'];
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
@@ -20,7 +20,7 @@ class Agencies extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Mesb.Muse', 'muse', 'agencies');
+        BackendMenu::setContext('Mesb.Muse', 'museplugin', 'agencies');
     }
 
     public function create_onSave()

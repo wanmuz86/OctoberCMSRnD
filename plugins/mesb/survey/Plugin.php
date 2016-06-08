@@ -2,7 +2,7 @@
 namespace Mesb\Survey;
 
 use System\Classes\PluginBase;
-
+use Backend;
 class Plugin extends PluginBase
 {
 
@@ -15,25 +15,37 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
     }
-/*
     public function registerNavigation()
     {
         return [
-            'agency' => [
-                'label'       => 'Muse Survey',
-                'url'         => Backend::url('mesb/survey/polls'),
-                'icon'        => 'icon-bar-chart-o',
-
+            'surveyplugin' => [
+                'label'       => 'Survey',
+                'url'         => Backend::url('mesb/survey/surveys'),
+                'icon'        => 'icon-copy',
+                'permissions' => ['survey.*'],
+                'order'       => 500,
 
                 'sideMenu' => [
-                    'polls' => [
-                        'label'       => 'Polls',
-                        'icon'        => 'icon-bar-chart-o',
-                        'url'         => Backend::url('mesb/survey/polls'),
+                    'surveys' => [
+                        'label'       => 'Surveys',
+                        'icon'        => 'icon-edit',
+                        'url'         => Backend::url('mesb/survey/surveys/create'),
+                        'permissions' => ['survey.surveys_access']
                     ],
+                    'questiontypes' => [
+                        'label'       => 'Type of Questions',
+                        'icon'        => 'icon-filter',
+                        'url'         => Backend::url('mesb/survey/questiontypes'),
+                        'permissions' => ['survey.survey_access']
+                    ],
+                    'questions' => [
+                        'label'       => 'Questions',
+                        'icon'        => 'icon-question',
+                        'url'         => Backend::url('mesb/survey/questions/'),
+                        'permissions' => ['survey.questions_access']
+                    ]
                 ]
             ]
         ];
     }
-*/
 }
